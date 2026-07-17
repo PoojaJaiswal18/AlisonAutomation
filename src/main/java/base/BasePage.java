@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
 
+import utils.ExtentManager;
 import utils.ScreenshotUtils;
 
 public class BasePage {
@@ -34,18 +35,14 @@ public class BasePage {
 		driver.get(config.getProperty("baseUrl"));
 	}
 	
-	public void tearDown(ITestResult result) {
+	public void tearDown() {
 		
-		if(result.getStatus()==ITestResult.FAILURE) {
-			
-			String path=ScreenshotUtils.capture(driver, result.getName());
-			
-			
-			
-		}
-		
-		
+		if(driver!= null) {
+			driver.quit();
+			}	
 	}
+	
+	
 	
 	
 
