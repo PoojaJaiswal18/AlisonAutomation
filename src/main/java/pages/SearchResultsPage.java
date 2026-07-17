@@ -29,8 +29,12 @@ public class SearchResultsPage {
 	}
 	
 	public void applyBeginnerFilter() {
-		scrollToAndClick(languageEnglishCheckBox);
+		scrollToAndClick(levelBeginnerCheckBox);
 	}
+	
+	 public void applyEnglishFilter() {
+	        scrollToAndClick(languageEnglishCheckBox);
+	    }
 	
 	public void scrollToAndClick(By locator) {
 		

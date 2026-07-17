@@ -19,7 +19,7 @@ public class BusinessPage {
 	}
 	
 	
-	public void clickREquestDemo() {
+	public void clickRequestDemo() {
 		wait.waitForClickability(requestDemoBtn).click();
 	}
 
