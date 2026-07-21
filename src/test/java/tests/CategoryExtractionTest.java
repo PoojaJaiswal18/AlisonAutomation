@@ -1,33 +1,80 @@
 package tests;
 
-import java.util.Map;
-
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import com.aventstack.extentreports.Status;
-
 import base.BasePage;
-import pages.CategoryFilterPage;
 import pages.HomePage;
+import pages.CategoryFilterPage;
 import utils.ExcelUtils;
 import utils.ExtentManager;
- 
+import org.testng.Assert;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import java.util.Map;
+
 public class CategoryExtractionTest extends BasePage {
- 
-    @Test(description = "Extract all Language filter options with course counts")
-    public void extractLanguageCatalog() {
+
+    @DataProvider(name = "categoryProvider")
+    public Object[][] categoryProvider() {
+        return ExcelUtils.readTestCaseData(EXCEL_PATH);
+    }
+
+    @Test(
+        dataProvider = "categoryProvider",
+        description = "Extract Language filter options and corresponding course counts"
+    )
+    public void extractCategoryCatalog(
+            String testCaseId,
+            String keyword,
+            String level,
+            String language,
+            String firstName,
+            String lastName,
+            String email,
+            String phone) {
+
+        System.out.println("====================================");
+        System.out.println("[TEST CASE] " + testCaseId);
+        System.out.println("[STEP] Searching Keyword : " + keyword);
+        System.out.println("====================================");
+
         HomePage home = new HomePage(driver);
-        home.searchCourse("programming");
-        ExtentManager.getTest().log(Status.INFO, "Landed on results page to access filter panel");
- 
-        CategoryFilterPage filterPage = new CategoryFilterPage(driver);
-        Map<String, Integer> languageSummary = filterPage.extractFilterOptionsWithCounts("Language");
- 
-        ExtentManager.getTest().log(Status.INFO, "Language options extracted: " + languageSummary);
-        Assert.assertTrue(languageSummary.size() > 0, "Expected at least one language option");
- 
-        ExcelUtils.writeCategorySummary(config.getProperty("excelPath"), "LanguageSummary", languageSummary);
-        ExtentManager.getTest().pass("Language catalog extracted and written to Excel");
+        home.searchCourse(keyword);
+
+        ExtentManager.getTest().log(
+                Status.INFO,
+                "Search performed using keyword: " + keyword);
+
+        CategoryFilterPage filterPage =
+                new CategoryFilterPage(driver);
+
+        Map<String, Integer> summary =
+                filterPage.extractFilterOptionsWithCounts("Language");
+
+        ExtentManager.getTest().log(
+                Status.INFO,
+                "Language options extracted: " + summary);
+
+        Assert.assertTrue(
+                summary.size() > 0,
+                "No Language filter options found");
+
+        for (Map.Entry<String, Integer> entry : summary.entrySet()) {
+
+            ExcelUtils.appendResult(
+                    EXCEL_PATH,
+                    "TestResults",
+                    testCaseId,
+                    "CATEGORY",
+                    entry.getKey(),
+                    String.valueOf(entry.getValue()),
+                    "",
+                    "PASS");
+        }
+
+        ExtentManager.getTest().pass(
+                testCaseId + " : Extracted "
+                        + summary.size()
+                        + " language options successfully");
     }
 }

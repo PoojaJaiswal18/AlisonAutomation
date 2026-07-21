@@ -1,6 +1,5 @@
 package utils;
-
-
+ 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -14,7 +13,7 @@ public class ExtentManager {
         if (extent == null) {
             ExtentSparkReporter spark = new ExtentSparkReporter("reports/SparkReport.html");
             spark.config().setDocumentTitle("Udemy Automation Report");
-            spark.config().setReportName("Complete User Journey Suite");
+            spark.config().setReportName("Udemy End-to-End Test Suite");
             spark.config().setTheme(Theme.STANDARD);
  
             extent = new ExtentReports();
@@ -28,4 +27,3 @@ public class ExtentManager {
     public static void setTest(ExtentTest t) { test.set(t); }
     public static ExtentTest getTest() { return test.get(); }
 }
- 

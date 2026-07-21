@@ -1,14 +1,14 @@
 package pages;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
+ 
+import utils.WaitUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import utils.WaitUtils;
+ 
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
  
 public class CategoryFilterPage {
     private WebDriver driver;
@@ -19,22 +19,43 @@ public class CategoryFilterPage {
         this.wait = new WaitUtils(driver, 15);
     }
  
-    private By filterGroupHeader(String groupName) {
-        return By.xpath("//div[@data-purpose='" + groupName + "'] | //fieldset[contains(.,'" + groupName + "')]");
+    private By filterGroupHeading(String groupName) {
+        return By.xpath("//*[normalize-space(text())='" + groupName + "']");
     }
  
     private By filterOptionsInGroup(String groupName) {
-        return By.xpath("//div[@data-purpose='" + groupName + "']//label | //fieldset[contains(.,'" + groupName + "')]//label");
+        return By.xpath(
+            "//label[contains(@class,'ud-form-label') and contains(.,'" + groupName + "')]" +
+            "/ancestor::div[contains(@class,'ud-form-group')]" +
+            "//label[contains(@class,'ud-toggle-input-container')]"
+        );
     }
  
     public void scrollToFilterGroup(String groupName) {
-        WebElement el = wait.waitForVisibility(filterGroupHeader(groupName));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});", el);
+
+        System.out.println(
+                "[STEP] Searching filter group : " + groupName);
+
+        WebElement el =
+                wait.waitForVisibility(
+                        filterGroupHeading(groupName));
+
+        System.out.println(
+                "[PASS] Found filter group : " + groupName);
+
+        ((JavascriptExecutor) driver)
+                .executeScript(
+                        "arguments[0].scrollIntoView({block:'center'});",
+                        el);
     }
  
+    /**
+     * Extracts every option label + its course count from a filter group
+     * (e.g. "Language" -> {"English"=10000, "Español"=886, ...}).
+     */
     public Map<String, Integer> extractFilterOptionsWithCounts(String groupName) {
         scrollToFilterGroup(groupName);
-        List<WebElement> options = wait.waitForAllVisisble(filterOptionsInGroup(groupName));
+        List<WebElement> options = wait.waitForAllVisible(filterOptionsInGroup(groupName));
         Map<String, Integer> optionCounts = new LinkedHashMap<>();
  
         for (WebElement option : options) {

@@ -1,49 +1,29 @@
 package base;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Properties;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.ITestResult;
-
-import utils.ExtentManager;
-import utils.ScreenshotUtils;
-
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+ 
 public class BasePage {
-	
-	protected WebDriver driver;
-	protected static Properties config=new Properties(); 
-	// A Java class used to store key-value pairs, commonly for configuration data
-	
-	
-	
-	public void loadConfig() throws IOException{
-		
-		try(FileInputStream fis=new FileInputStream("src/test/resources/config.properties")){
-			
-			config.load(fis);
-		}	
-	}
-	
-	
-	public void SetUp() {
-		
-		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.get(config.getProperty("baseUrl"));
-	}
-	
-	public void tearDown() {
-		
-		if(driver!= null) {
-			driver.quit();
-			}	
-	}
-	
-	
-	
-	
-
+ 
+    public static final String BASE_URL = "https://www.udemy.com/";
+    public static final String EXCEL_PATH = "src/test/resources/TestData.xlsx";
+    public static final int EXPLICIT_WAIT_SECONDS = 15;
+ 
+    protected WebDriver driver;
+ 
+    @BeforeMethod
+    public void setUp() {
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get(BASE_URL);
+    }
+ 
+    @AfterMethod
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 }
