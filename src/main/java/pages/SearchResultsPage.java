@@ -21,43 +21,27 @@ public class SearchResultsPage {
      * FILTERS
      */
 
-    private By languageFilter =
-            By.xpath("//div[@data-url-var='translation']");
+    private By languageFilter = By.xpath("//div[@data-url-var='translation']");
 
-    private By levelFilter =
-            By.xpath("//div[@data-url-var='level']");
+    private By levelFilter =By.xpath("//div[@data-url-var='level']");
 
-    private By languageHeading =
-            By.xpath("//div[@data-url-var='translation']//span[contains(@class,'filter-heading')]");
+    private By languageHeading =By.xpath("//div[@data-url-var='translation']//span[contains(@class,'filter-heading')]");
 
-    private By levelHeading =
-            By.xpath("//div[@data-url-var='level']//span[contains(@class,'filter-heading')]");
+    private By levelHeading =By.xpath("//div[@data-url-var='level']//span[contains(@class,'filter-heading')]");
 
     /*
      * COURSE CARDS
      */
 
-    private By courseCards =
-            By.xpath("//div[contains(@class,'card--white')]");
+    private By courseCards =By.xpath("//div[contains(@class,'card--white')]");
 
-    private By courseTitle =
-            By.xpath(".//div[contains(@class,'card__top')]//h3");
+    private By courseTitle =By.xpath(".//div[contains(@class,'card__top')]//h3");
 
-    private By courseDuration =
-            By.xpath(".//*[contains(text(),'hrs')]");
+    private By courseDuration =By.xpath(".//*[contains(text(),'hrs')]");
 
-    private By courseLearners =
-            By.xpath(".//*[contains(text(),'learners')]");
+    private By courseLearners =By.xpath(".//*[contains(text(),'learners')]");
 
-    private By moreInfoButton =
-            By.xpath(".//a[contains(@class,'card__more')]");
-
-    /*
-     * HOVER TOOLTIP
-     */
-
-    private By hoverMessage =
-            By.xpath("//div[contains(@class,'tooltip') or contains(@class,'popover')]");
+    private By moreInfoButton = By.xpath(".//a[contains(@class,'card__more')]");
 
     public SearchResultsPage(WebDriver driver) {
 
@@ -271,29 +255,7 @@ public class SearchResultsPage {
         return courses;
     }
 
-    public String captureHoverMessageFromFirstCourse() {
-
-        WebElement card =
-                wait.waitForAllVisible(courseCards)
-                        .get(0);
-
-        new Actions(driver)
-                .moveToElement(card)
-                .perform();
-
-        try {
-
-            return wait.waitForVisibility(
-                    hoverMessage)
-                    .getText()
-                    .trim();
-
-        } catch (Exception e) {
-
-            return "";
-        }
-    }
-
+   
     public void openFirstCourseDetails() {
 
         WebElement card =
@@ -316,6 +278,8 @@ public class SearchResultsPage {
         System.out.println(
                 "[PASS] Course Opened");
     }
+    
+    
 
     public String getFirstCourseTitle() {
 

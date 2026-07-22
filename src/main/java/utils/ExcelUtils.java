@@ -245,8 +245,7 @@ public class ExcelUtils {
             String duration,
             String enrollment,
             String modules,
-            String publisher,
-            String hoverMessage) {
+            String publisher) {
 
         try {
 
@@ -274,8 +273,8 @@ public class ExcelUtils {
                         "Duration",
                         "No. of enrollment",
                         "No. of Modules",
-                        "Course Publisher",
-                        "Message Captured On Hover"
+                        "Course Publisher"
+                        
                 };
 
                 for (int i = 0;
@@ -316,8 +315,7 @@ public class ExcelUtils {
             row.createCell(6)
                     .setCellValue(publisher);
 
-            row.createCell(7)
-                    .setCellValue(hoverMessage);
+           
 
             try (FileOutputStream fos =
                          new FileOutputStream(

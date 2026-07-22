@@ -115,17 +115,6 @@ public class AlisonUserJourneyTest extends BasePage {
                     "PASS");
         }
 
-        /*
-         * STEP 4
-         * HOVER MESSAGE
-         */
-
-        String hoverMessage =
-                results.captureHoverMessageFromFirstCourse();
-
-        System.out.println(
-                "[INFO] Hover Message : "
-                        + hoverMessage);
 
         /*
          * STEP 5
@@ -160,8 +149,7 @@ public class AlisonUserJourneyTest extends BasePage {
                         ""),
                 details.getOrDefault(
                         "Publisher",
-                        ""),
-                hoverMessage);
+                        ""));
 
         /*
          * STEP 6
