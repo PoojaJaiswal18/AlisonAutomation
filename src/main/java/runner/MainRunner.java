@@ -18,9 +18,10 @@ public class MainRunner {
         XmlSuite suite = new XmlSuite();
         suite.setName("UdemyAutomationSuite");
  
-        addTest(suite, "IdentifyCourses", "tests.IdentifyCoursesTest");
-        addTest(suite, "CategoryExtraction", "tests.CategoryExtractionTest");
-        addTest(suite, "BusinessForm", "tests.BusinessFormTest");
+        addTest(
+                suite,
+                "UdemyUserJourney",
+                "tests.AlisonUserJourneyTest");
  
         testng.setXmlSuites(Collections.singletonList(suite));
         testng.run();

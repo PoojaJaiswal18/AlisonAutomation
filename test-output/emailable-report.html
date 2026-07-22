@@ -8,133 +8,64 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">UdemyAutomationSuite</th></tr>
-<tr><td><a href="#t0">IdentifyCourses</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">112,171</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">CategoryExtraction</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">117,050</td><td></td><td></td></tr>
-<tr><td><a href="#t2">BusinessForm</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">107,853</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">0</th><th class="num">0</th><th class="num">0</th><th class="num attn">9</th><th class="num">337,074</th><th colspan="2"></th></tr>
+<tr><th colspan="8">AlisonAutomationSuite</th></tr>
+<tr><td><a href="#t0">AlisonUserJourney</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">390,394</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">UdemyAutomationSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">IdentifyCourses &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">tests.IdentifyCoursesTest</td><td><a href="#m0">identifyTopCourses</a></td><td rowspan="3">1784607268555</td><td rowspan="3">18929</td></tr><tr class="failedeven"><td><a href="#m1">identifyTopCourses</a></td></tr><tr class="failedeven"><td><a href="#m2">identifyTopCourses</a></td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">CategoryExtraction &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">tests.CategoryExtractionTest</td><td><a href="#m3">extractCategoryCatalog</a></td><td rowspan="3">1784607421275</td><td rowspan="3">19203</td></tr><tr class="failedeven"><td><a href="#m4">extractCategoryCatalog</a></td></tr><tr class="failedeven"><td><a href="#m5">extractCategoryCatalog</a></td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">BusinessForm &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">tests.BusinessFormTest</td><td><a href="#m6">submitFormWithInvalidEmail</a></td><td rowspan="3">1784607499549</td><td rowspan="3">11713</td></tr><tr class="failedeven"><td><a href="#m7">submitFormWithInvalidEmail</a></td></tr><tr class="failedeven"><td><a href="#m8">submitFormWithInvalidEmail</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">AlisonAutomationSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">AlisonUserJourney &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">tests.AlisonUserJourneyTest</td><td><a href="#m0">completeJourney</a></td><td rowspan="3">1784721806909</td><td rowspan="3">12687</td></tr><tr class="failedeven"><td><a href="#m1">completeJourney</a></td></tr><tr class="failedeven"><td><a href="#m2">completeJourney</a></td></tr></tbody>
 </table>
-<h2>IdentifyCourses</h2><h3 id="m0">tests.IdentifyCoursesTest#identifyTopCourses</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>TC_02</td><td>python programming</td><td>Beginner</td><td>English</td><td>Rohan</td><td>Verma</td><td>rohanvermaatgmail.com</td><td>9876543211</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,&apos;ud-toggle-input-container&apos;) and contains(.,&apos;Beginner&apos;)] (tried for 15 second(s) with 500 milliseconds interval)
+<h2>AlisonUserJourney</h2><h3 id="m0">tests.AlisonUserJourneyTest#completeJourney</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th><th>Parameter #11</th><th>Parameter #12</th><th>Parameter #13</th><th>Parameter #14</th><th>Parameter #15</th></tr><tr class="param stripe"><td>TC_01</td><td>web development</td><td>Beginner</td><td>English</td><td>Aisha</td><td>Khan</td><td>aisha.khan@@test.com</td><td>Executive Management</td><td></td><td></td><td></td><td></td><td></td><td></td><td>LMS+</td></tr><tr><th colspan="15">Exception</th></tr><tr><td colspan="15"><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=149.0.7827.103)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56232}, goog:processID: 11552, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56232/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 55009abc805d38331e7d22396922d65c
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.SearchResultsPage.applyFilterByText(SearchResultsPage.java:39)
-	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:42)
+Command: [c1c23960528624f9f9fdbf6a268d6829, isElementDisplayed {id=f.E1DDCBBF9D5C323761C5C703E7113C07.d.094DE701084FCE99F345C6F68E95C4E6.e.1668}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53122}, goog:processID: 30576, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53122/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c1c23960528624f9f9fdbf6a268d6829)] -&gt; xpath: //div[contains(@class,&apos;card--white&apos;)]]
+Session ID: c1c23960528624f9f9fdbf6a268d6829
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:223)
+	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:218)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at utils.WaitUtils.waitForAllVisible(WaitUtils.java:28)
+	at pages.SearchResultsPage.extractVisibleCourses(SearchResultsPage.java:252)
+	at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:99)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.IdentifyCoursesTest#identifyTopCourses</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>TC_03</td><td>data science</td><td>Intermediate</td><td>English</td><td>Neha</td><td>Sharma</td><td>neha.sharma@nodomain</td><td>9876543212</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,&apos;ud-toggle-input-container&apos;) and contains(.,&apos;Intermediate&apos;)] (tried for 15 second(s) with 500 milliseconds interval)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.AlisonUserJourneyTest#completeJourney</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th><th>Parameter #11</th><th>Parameter #12</th><th>Parameter #13</th><th>Parameter #14</th><th>Parameter #15</th></tr><tr class="param stripe"><td>TC_02</td><td>python programming</td><td>Beginner</td><td>English</td><td>Rohan</td><td>Verma</td><td>rohanvermaatgmail.com</td><td>HR Manager</td><td></td><td></td><td></td><td></td><td></td><td></td><td>Free LMS</td></tr><tr><th colspan="15">Exception</th></tr><tr><td colspan="15"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),&apos;Your Department&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62519}, goog:processID: 15228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62519/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6ba67732f6a968729cf4e5d258932bfc
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.SearchResultsPage.applyFilterByText(SearchResultsPage.java:39)
-	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:42)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.IdentifyCoursesTest#identifyTopCourses</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>TC_01</td><td>web development</td><td>Beginner</td><td>English</td><td>Aisha</td><td>Khan</td><td>aisha.khan@@test.com</td><td>9876543210</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,&apos;ud-toggle-input-container&apos;) and contains(.,&apos;Beginner&apos;)] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53297}, goog:processID: 22564, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53297/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48a674e183ca16b3558f8a5f90e441d2
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.SearchResultsPage.applyFilterByText(SearchResultsPage.java:39)
-	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:42)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>CategoryExtraction</h2><h3 id="m3">tests.CategoryExtractionTest#extractCategoryCatalog</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>TC_03</td><td>data science</td><td>Intermediate</td><td>English</td><td>Neha</td><td>Sharma</td><td>neha.sharma@nodomain</td><td>9876543212</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())=&apos;Language&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61476}, goog:processID: 19648, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61476/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ddcfc70a98d2de07ed25e88504f24cb2
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.CategoryFilterPage.scrollToFilterGroup(CategoryFilterPage.java:40)
-	at pages.CategoryFilterPage.extractFilterOptionsWithCounts(CategoryFilterPage.java:57)
-	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:52)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.CategoryExtractionTest#extractCategoryCatalog</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>TC_01</td><td>web development</td><td>Beginner</td><td>English</td><td>Aisha</td><td>Khan</td><td>aisha.khan@@test.com</td><td>9876543210</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())=&apos;Language&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62215}, goog:processID: 2108, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62215/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1526c559699c719d7c85d082e36142c8
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.CategoryFilterPage.scrollToFilterGroup(CategoryFilterPage.java:40)
-	at pages.CategoryFilterPage.extractFilterOptionsWithCounts(CategoryFilterPage.java:57)
-	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:52)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">tests.CategoryExtractionTest#extractCategoryCatalog</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>TC_02</td><td>python programming</td><td>Beginner</td><td>English</td><td>Rohan</td><td>Verma</td><td>rohanvermaatgmail.com</td><td>9876543211</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())=&apos;Language&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56648}, goog:processID: 25152, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56648/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 227ec593e907c9ab6ec03b0e7c894307
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.CategoryFilterPage.scrollToFilterGroup(CategoryFilterPage.java:40)
-	at pages.CategoryFilterPage.extractFilterOptionsWithCounts(CategoryFilterPage.java:57)
-	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:52)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>BusinessForm</h2><h3 id="m6">tests.BusinessFormTest#submitFormWithInvalidEmail</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>TC_02</td><td>python programming</td><td>Beginner</td><td>English</td><td>Rohan</td><td>Verma</td><td>rohanvermaatgmail.com</td><td>9876543211</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for js return document.readyState===&apos;complete&apos; to be executable (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52530}, goog:processID: 13828, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52530/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c2406bf0bef9dbdb89b620e40750fa61
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WindowUtils.switchToNewWindow(WindowUtils.java:20)
-	at tests.BusinessFormTest.submitFormWithInvalidEmail(BusinessFormTest.java:38)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">tests.BusinessFormTest#submitFormWithInvalidEmail</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>TC_03</td><td>data science</td><td>Intermediate</td><td>English</td><td>Neha</td><td>Sharma</td><td>neha.sharma@nodomain</td><td>9876543212</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class=&quot;section-header single btn-get-started&quot;] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55416}, goog:processID: 25164, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55416/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: afdb9369b9b44dd517cf91c45141bdd3
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57480}, goog:processID: 29424, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57480/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3467dcc4bb4fa4e2fe5514eeab9d7c02
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
-	at pages.BusinessPage.clickRequestDemo(BusinessPage.java:19)
-	at tests.BusinessFormTest.submitFormWithInvalidEmail(BusinessFormTest.java:43)
+	at pages.BusinessFormPage.selectDropdownOption(BusinessFormPage.java:98)
+	at pages.BusinessFormPage.selectDepartment(BusinessFormPage.java:115)
+	at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:197)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">tests.BusinessFormTest#submitFormWithInvalidEmail</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th></tr><tr class="param stripe"><td>TC_01</td><td>web development</td><td>Beginner</td><td>English</td><td>Aisha</td><td>Khan</td><td>aisha.khan@@test.com</td><td>9876543210</td></tr><tr><th colspan="8">Exception</th></tr><tr><td colspan="8"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class=&quot;section-header single btn-get-started&quot;] (tried for 15 second(s) with 500 milliseconds interval)
+<h3 id="m2">tests.AlisonUserJourneyTest#completeJourney</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th><th>Parameter #7</th><th>Parameter #8</th><th>Parameter #9</th><th>Parameter #10</th><th>Parameter #11</th><th>Parameter #12</th><th>Parameter #13</th><th>Parameter #14</th><th>Parameter #15</th></tr><tr class="param stripe"><td>TC_03</td><td>data science</td><td>Intermediate</td><td>English</td><td>Neha</td><td>Sharma</td><td>neha.sharma@nodomain</td><td>Learning &amp;Development</td><td></td><td></td><td></td><td></td><td></td><td></td><td>API</td></tr><tr><th colspan="15">Exception</th></tr><tr><td colspan="15"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),&apos;Your Department&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61491}, goog:processID: 15632, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61491/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 576f5f2561b6215165a777fc16ee0b9f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61921}, goog:processID: 32756, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61921/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2b768996b34ee0aed8b902e8518d4b44
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
-	at pages.BusinessPage.clickRequestDemo(BusinessPage.java:19)
-	at tests.BusinessFormTest.submitFormWithInvalidEmail(BusinessFormTest.java:43)
+	at pages.BusinessFormPage.selectDropdownOption(BusinessFormPage.java:98)
+	at pages.BusinessFormPage.selectDepartment(BusinessFormPage.java:115)
+	at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:197)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>

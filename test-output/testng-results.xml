@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="0" failed="9" skipped="0">
+<testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-21T09:43:38 IST" name="UdemyAutomationSuite" finished-at="2026-07-21T09:49:16 IST" duration-ms="337625">
+  <suite started-at="2026-07-22T17:33:09 IST" name="AlisonAutomationSuite" finished-at="2026-07-22T17:39:39 IST" duration-ms="390394">
     <groups>
     </groups>
-    <test started-at="2026-07-21T09:43:38 IST" name="IdentifyCourses" finished-at="2026-07-21T09:45:30 IST" duration-ms="112171">
-      <class name="tests.IdentifyCoursesTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.IdentifyCoursesTest@1573f9fc]" started-at="2026-07-21T09:43:39 IST" name="setUp" finished-at="2026-07-21T09:43:50 IST" duration-ms="11256" status="PASS">
+    <test started-at="2026-07-22T17:33:09 IST" name="AlisonUserJourney" finished-at="2026-07-22T17:39:39 IST" duration-ms="390394">
+      <class name="tests.AlisonUserJourneyTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-22T17:33:12 IST" name="setUp" finished-at="2026-07-22T17:33:26 IST" duration-ms="14845" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="identifyTopCourses(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.IdentifyCoursesTest@1573f9fc]" started-at="2026-07-21T09:43:51 IST" name="identifyTopCourses" description="Search a keyword, apply Level+Language filters, extract top N courses" data-provider="searchKeywordProvider" finished-at="2026-07-21T09:44:11 IST" duration-ms="20536" status="FAIL">
+        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-22T17:33:26 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-22T17:33:39 IST" duration-ms="12687" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -50,31 +50,87 @@
             </param>
             <param index="7">
               <value>
-                <![CDATA[9876543210]]>
+                <![CDATA[Executive Management]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[LMS+]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,'ud-toggle-input-container') and contains(.,'Beginner')] (tried for 15 second(s) with 500 milliseconds interval)
+              <![CDATA[stale element reference: stale element not found in the current frame
+  (Session info: chrome=149.0.7827.103)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53297}, goog:processID: 22564, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53297/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48a674e183ca16b3558f8a5f90e441d2]]>
+Command: [c1c23960528624f9f9fdbf6a268d6829, isElementDisplayed {id=f.E1DDCBBF9D5C323761C5C703E7113C07.d.094DE701084FCE99F345C6F68E95C4E6.e.1668}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53122}, goog:processID: 30576, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53122/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c1c23960528624f9f9fdbf6a268d6829)] -> xpath: //div[contains(@class,'card--white')]]
+Session ID: c1c23960528624f9f9fdbf6a268d6829]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,'ud-toggle-input-container') and contains(.,'Beginner')] (tried for 15 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=149.0.7827.103)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53297}, goog:processID: 22564, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53297/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48a674e183ca16b3558f8a5f90e441d2
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-at pages.SearchResultsPage.applyFilterByText(SearchResultsPage.java:39)
-at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:42)
+Command: [c1c23960528624f9f9fdbf6a268d6829, isElementDisplayed {id=f.E1DDCBBF9D5C323761C5C703E7113C07.d.094DE701084FCE99F345C6F68E95C4E6.e.1668}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53122}, goog:processID: 30576, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53122/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (c1c23960528624f9f9fdbf6a268d6829)] -> xpath: //div[contains(@class,'card--white')]]
+Session ID: c1c23960528624f9f9fdbf6a268d6829
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:223)
+at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:218)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at utils.WaitUtils.waitForAllVisible(WaitUtils.java:28)
+at pages.SearchResultsPage.extractVisibleCourses(SearchResultsPage.java:252)
+at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:99)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -103,19 +159,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- identifyTopCourses -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.IdentifyCoursesTest@1573f9fc]" started-at="2026-07-21T09:44:12 IST" name="tearDown" finished-at="2026-07-21T09:44:19 IST" duration-ms="7414" status="PASS">
+        </test-method> <!-- completeJourney -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-22T17:33:41 IST" name="tearDown" finished-at="2026-07-22T17:33:50 IST" duration-ms="9133" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.IdentifyCoursesTest@1573f9fc]" started-at="2026-07-21T09:44:19 IST" name="setUp" finished-at="2026-07-21T09:44:28 IST" duration-ms="8954" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-22T17:33:50 IST" name="setUp" finished-at="2026-07-22T17:34:01 IST" duration-ms="11079" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="identifyTopCourses(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.IdentifyCoursesTest@1573f9fc]" started-at="2026-07-21T09:44:28 IST" name="identifyTopCourses" description="Search a keyword, apply Level+Language filters, extract top N courses" data-provider="searchKeywordProvider" finished-at="2026-07-21T09:44:47 IST" duration-ms="18929" status="FAIL">
+        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-22T17:34:01 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-22T17:36:34 IST" duration-ms="152113" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -154,562 +210,67 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </param>
             <param index="7">
               <value>
-                <![CDATA[9876543211]]>
+                <![CDATA[HR Manager]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[Free LMS]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,'ud-toggle-input-container') and contains(.,'Beginner')] (tried for 15 second(s) with 500 milliseconds interval)
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),'Your Department')] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56232}, goog:processID: 11552, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56232/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 55009abc805d38331e7d22396922d65c]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57480}, goog:processID: 29424, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57480/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3467dcc4bb4fa4e2fe5514eeab9d7c02]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,'ud-toggle-input-container') and contains(.,'Beginner')] (tried for 15 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),'Your Department')] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56232}, goog:processID: 11552, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56232/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 55009abc805d38331e7d22396922d65c
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-at pages.SearchResultsPage.applyFilterByText(SearchResultsPage.java:39)
-at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:42)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- identifyTopCourses -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.IdentifyCoursesTest@1573f9fc]" started-at="2026-07-21T09:44:47 IST" name="tearDown" finished-at="2026-07-21T09:44:55 IST" duration-ms="7271" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.IdentifyCoursesTest@1573f9fc]" started-at="2026-07-21T09:44:55 IST" name="setUp" finished-at="2026-07-21T09:45:04 IST" duration-ms="8982" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="identifyTopCourses(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.IdentifyCoursesTest@1573f9fc]" started-at="2026-07-21T09:45:04 IST" name="identifyTopCourses" description="Search a keyword, apply Level+Language filters, extract top N courses" data-provider="searchKeywordProvider" finished-at="2026-07-21T09:45:23 IST" duration-ms="19124" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[TC_03]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[data science]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Intermediate]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[English]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Neha]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Sharma]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[neha.sharma@nodomain]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[9876543212]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,'ud-toggle-input-container') and contains(.,'Intermediate')] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62519}, goog:processID: 15228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62519/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6ba67732f6a968729cf4e5d258932bfc]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,'ud-toggle-input-container') and contains(.,'Intermediate')] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62519}, goog:processID: 15228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62519/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6ba67732f6a968729cf4e5d258932bfc
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-at pages.SearchResultsPage.applyFilterByText(SearchResultsPage.java:39)
-at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:42)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- identifyTopCourses -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.IdentifyCoursesTest@1573f9fc]" started-at="2026-07-21T09:45:23 IST" name="tearDown" finished-at="2026-07-21T09:45:30 IST" duration-ms="7325" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- tests.IdentifyCoursesTest -->
-    </test> <!-- IdentifyCourses -->
-    <test started-at="2026-07-21T09:45:31 IST" name="CategoryExtraction" finished-at="2026-07-21T09:47:28 IST" duration-ms="117050">
-      <class name="tests.CategoryExtractionTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CategoryExtractionTest@75db5df9]" started-at="2026-07-21T09:45:31 IST" name="setUp" finished-at="2026-07-21T09:45:42 IST" duration-ms="11007" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="extractCategoryCatalog(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.CategoryExtractionTest@75db5df9]" started-at="2026-07-21T09:45:42 IST" name="extractCategoryCatalog" description="Extract Language filter options and corresponding course counts" data-provider="categoryProvider" finished-at="2026-07-21T09:46:07 IST" duration-ms="25285" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[TC_01]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[web development]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Beginner]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[English]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Aisha]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Khan]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[aisha.khan@@test.com]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[9876543210]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())='Language'] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62215}, goog:processID: 2108, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62215/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1526c559699c719d7c85d082e36142c8]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())='Language'] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62215}, goog:processID: 2108, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62215/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1526c559699c719d7c85d082e36142c8
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-at pages.CategoryFilterPage.scrollToFilterGroup(CategoryFilterPage.java:40)
-at pages.CategoryFilterPage.extractFilterOptionsWithCounts(CategoryFilterPage.java:57)
-at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:52)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extractCategoryCatalog -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CategoryExtractionTest@75db5df9]" started-at="2026-07-21T09:46:07 IST" name="tearDown" finished-at="2026-07-21T09:46:15 IST" duration-ms="7238" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CategoryExtractionTest@75db5df9]" started-at="2026-07-21T09:46:15 IST" name="setUp" finished-at="2026-07-21T09:46:26 IST" duration-ms="11532" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="extractCategoryCatalog(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.CategoryExtractionTest@75db5df9]" started-at="2026-07-21T09:46:26 IST" name="extractCategoryCatalog" description="Extract Language filter options and corresponding course counts" data-provider="categoryProvider" finished-at="2026-07-21T09:46:45 IST" duration-ms="18907" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[TC_02]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[python programming]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Beginner]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[English]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Rohan]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Verma]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[rohanvermaatgmail.com]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[9876543211]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())='Language'] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56648}, goog:processID: 25152, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56648/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 227ec593e907c9ab6ec03b0e7c894307]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())='Language'] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56648}, goog:processID: 25152, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56648/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 227ec593e907c9ab6ec03b0e7c894307
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-at pages.CategoryFilterPage.scrollToFilterGroup(CategoryFilterPage.java:40)
-at pages.CategoryFilterPage.extractFilterOptionsWithCounts(CategoryFilterPage.java:57)
-at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:52)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extractCategoryCatalog -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CategoryExtractionTest@75db5df9]" started-at="2026-07-21T09:46:45 IST" name="tearDown" finished-at="2026-07-21T09:46:52 IST" duration-ms="6359" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.CategoryExtractionTest@75db5df9]" started-at="2026-07-21T09:46:52 IST" name="setUp" finished-at="2026-07-21T09:47:01 IST" duration-ms="9077" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="extractCategoryCatalog(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.CategoryExtractionTest@75db5df9]" started-at="2026-07-21T09:47:01 IST" name="extractCategoryCatalog" description="Extract Language filter options and corresponding course counts" data-provider="categoryProvider" finished-at="2026-07-21T09:47:20 IST" duration-ms="19203" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[TC_03]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[data science]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Intermediate]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[English]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Neha]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Sharma]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[neha.sharma@nodomain]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[9876543212]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())='Language'] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61476}, goog:processID: 19648, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61476/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ddcfc70a98d2de07ed25e88504f24cb2]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())='Language'] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61476}, goog:processID: 19648, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61476/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ddcfc70a98d2de07ed25e88504f24cb2
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-at pages.CategoryFilterPage.scrollToFilterGroup(CategoryFilterPage.java:40)
-at pages.CategoryFilterPage.extractFilterOptionsWithCounts(CategoryFilterPage.java:57)
-at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:52)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- extractCategoryCatalog -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.CategoryExtractionTest@75db5df9]" started-at="2026-07-21T09:47:20 IST" name="tearDown" finished-at="2026-07-21T09:47:28 IST" duration-ms="7590" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- tests.CategoryExtractionTest -->
-    </test> <!-- CategoryExtraction -->
-    <test started-at="2026-07-21T09:47:28 IST" name="BusinessForm" finished-at="2026-07-21T09:49:16 IST" duration-ms="107853">
-      <class name="tests.BusinessFormTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BusinessFormTest@399c4be1]" started-at="2026-07-21T09:47:28 IST" name="setUp" finished-at="2026-07-21T09:47:43 IST" duration-ms="14970" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="submitFormWithInvalidEmail(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.BusinessFormTest@399c4be1]" started-at="2026-07-21T09:47:43 IST" name="submitFormWithInvalidEmail" description="Fill Udemy Business demo form with a deliberately invalid email and capture the validation error" data-provider="businessFormProvider" finished-at="2026-07-21T09:48:04 IST" duration-ms="20652" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[TC_01]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[web development]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Beginner]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[English]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Aisha]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Khan]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[aisha.khan@@test.com]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[9876543210]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class="section-header single btn-get-started"] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61491}, goog:processID: 15632, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61491/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 576f5f2561b6215165a777fc16ee0b9f]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class="section-header single btn-get-started"] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61491}, goog:processID: 15632, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61491/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 576f5f2561b6215165a777fc16ee0b9f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57480}, goog:processID: 29424, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57480/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3467dcc4bb4fa4e2fe5514eeab9d7c02
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
-at pages.BusinessPage.clickRequestDemo(BusinessPage.java:19)
-at tests.BusinessFormTest.submitFormWithInvalidEmail(BusinessFormTest.java:43)
+at pages.BusinessFormPage.selectDropdownOption(BusinessFormPage.java:98)
+at pages.BusinessFormPage.selectDepartment(BusinessFormPage.java:115)
+at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:197)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -741,119 +302,16 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- submitFormWithInvalidEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BusinessFormTest@399c4be1]" started-at="2026-07-21T09:48:04 IST" name="tearDown" finished-at="2026-07-21T09:48:11 IST" duration-ms="6684" status="PASS">
+        </test-method> <!-- completeJourney -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-22T17:36:34 IST" name="tearDown" finished-at="2026-07-22T17:36:45 IST" duration-ms="10507" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BusinessFormTest@399c4be1]" started-at="2026-07-21T09:48:11 IST" name="setUp" finished-at="2026-07-21T09:48:19 IST" duration-ms="8524" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-22T17:36:45 IST" name="setUp" finished-at="2026-07-22T17:36:54 IST" duration-ms="9736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="submitFormWithInvalidEmail(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.BusinessFormTest@399c4be1]" started-at="2026-07-21T09:48:19 IST" name="submitFormWithInvalidEmail" description="Fill Udemy Business demo form with a deliberately invalid email and capture the validation error" data-provider="businessFormProvider" finished-at="2026-07-21T09:48:31 IST" duration-ms="11713" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[TC_02]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[python programming]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Beginner]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[English]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Rohan]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[Verma]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[rohanvermaatgmail.com]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[9876543211]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for js return document.readyState==='complete' to be executable (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52530}, goog:processID: 13828, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52530/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c2406bf0bef9dbdb89b620e40750fa61]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for js return document.readyState==='complete' to be executable (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52530}, goog:processID: 13828, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52530/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c2406bf0bef9dbdb89b620e40750fa61
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WindowUtils.switchToNewWindow(WindowUtils.java:20)
-at tests.BusinessFormTest.submitFormWithInvalidEmail(BusinessFormTest.java:38)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- submitFormWithInvalidEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BusinessFormTest@399c4be1]" started-at="2026-07-21T09:48:31 IST" name="tearDown" finished-at="2026-07-21T09:48:36 IST" duration-ms="5446" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.BusinessFormTest@399c4be1]" started-at="2026-07-21T09:48:36 IST" name="setUp" finished-at="2026-07-21T09:48:47 IST" duration-ms="10846" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="submitFormWithInvalidEmail(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.BusinessFormTest@399c4be1]" started-at="2026-07-21T09:48:47 IST" name="submitFormWithInvalidEmail" description="Fill Udemy Business demo form with a deliberately invalid email and capture the validation error" data-provider="businessFormProvider" finished-at="2026-07-21T09:49:07 IST" duration-ms="19984" status="FAIL">
+        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-22T17:36:54 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-22T17:39:28 IST" duration-ms="153672" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -892,31 +350,67 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </param>
             <param index="7">
               <value>
-                <![CDATA[9876543212]]>
+                <![CDATA[Learning &Development]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[API]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class="section-header single btn-get-started"] (tried for 15 second(s) with 500 milliseconds interval)
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),'Your Department')] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55416}, goog:processID: 25164, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55416/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: afdb9369b9b44dd517cf91c45141bdd3]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61921}, goog:processID: 32756, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61921/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2b768996b34ee0aed8b902e8518d4b44]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //a[@class="section-header single btn-get-started"] (tried for 15 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),'Your Department')] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55416}, goog:processID: 25164, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55416/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: afdb9369b9b44dd517cf91c45141bdd3
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61921}, goog:processID: 32756, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61921/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2b768996b34ee0aed8b902e8518d4b44
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
-at pages.BusinessPage.clickRequestDemo(BusinessPage.java:19)
-at tests.BusinessFormTest.submitFormWithInvalidEmail(BusinessFormTest.java:43)
+at pages.BusinessFormPage.selectDropdownOption(BusinessFormPage.java:98)
+at pages.BusinessFormPage.selectDepartment(BusinessFormPage.java:115)
+at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:197)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -948,12 +442,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- submitFormWithInvalidEmail -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.BusinessFormTest@399c4be1]" started-at="2026-07-21T09:49:08 IST" name="tearDown" finished-at="2026-07-21T09:49:16 IST" duration-ms="7991" status="PASS">
+        </test-method> <!-- completeJourney -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-22T17:39:28 IST" name="tearDown" finished-at="2026-07-22T17:39:39 IST" duration-ms="10966" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.BusinessFormTest -->
-    </test> <!-- BusinessForm -->
-  </suite> <!-- UdemyAutomationSuite -->
+      </class> <!-- tests.AlisonUserJourneyTest -->
+    </test> <!-- AlisonUserJourney -->
+  </suite> <!-- AlisonAutomationSuite -->
 </testng-results>

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 21 09:45:31 IST 2026</td>
+<td>Started on:</td><td>Wed Jul 22 10:59:48 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>117 seconds (117050 ms)</td>
+<tr><td>Total time:</td><td>69 seconds (69250 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,33 +76,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.CategoryExtractionTest.extractCategoryCatalog()'><b>extractCategoryCatalog</b><br>Test class: tests.CategoryExtractionTest<br>Test method: Extract Language filter options and corresponding course counts<br>Parameters: TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, 9876543212</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())=&apos;Language&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61476}, goog:processID: 19648, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61476/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ddcfc70a98d2de07ed25e88504f24cb2
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.CategoryFilterPage.scrollToFilterGroup(CategoryFilterPage.java:40)
-	at pages.CategoryFilterPage.extractFilterOptionsWithCounts(CategoryFilterPage.java:57)
-	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:52)
+<td title='tests.CategoryExtractionTest.extractCategoryCatalog()'><b>extractCategoryCatalog</b><br>Test class: tests.CategoryExtractionTest<br>Test method: Extract available Languages and Levels from Alison filters<br>Parameters: TC_01, web development, Beginner, English, Aisha, Khan, aisha.khan@@test.com, Cognizant, , , , , , , Executive Management</td>
+<td><div><pre>java.lang.AssertionError: No Languages Found expected [true] but found [false]
+	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:86)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1207664329", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1207664329'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())=&apos;Language&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61476}, goog:processID: 19648, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61476/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ddcfc70a98d2de07ed25e88504f24cb2
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.CategoryFilterPage.scrollToFilterGroup(CategoryFilterPage.java:40)
-	at pages.CategoryFilterPage.extractFilterOptionsWithCounts(CategoryFilterPage.java:57)
-	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:52)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1990651973", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1990651973'><pre>java.lang.AssertionError: No Languages Found expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:86)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -130,36 +113,19 @@ Session ID: ddcfc70a98d2de07ed25e88504f24cb2
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>19</td>
+<td>7</td>
 <td>tests.CategoryExtractionTest@75db5df9</td></tr>
 <tr>
-<td title='tests.CategoryExtractionTest.extractCategoryCatalog()'><b>extractCategoryCatalog</b><br>Test class: tests.CategoryExtractionTest<br>Test method: Extract Language filter options and corresponding course counts<br>Parameters: TC_01, web development, Beginner, English, Aisha, Khan, aisha.khan@@test.com, 9876543210</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())=&apos;Language&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62215}, goog:processID: 2108, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62215/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1526c559699c719d7c85d082e36142c8
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.CategoryFilterPage.scrollToFilterGroup(CategoryFilterPage.java:40)
-	at pages.CategoryFilterPage.extractFilterOptionsWithCounts(CategoryFilterPage.java:57)
-	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:52)
+<td title='tests.CategoryExtractionTest.extractCategoryCatalog()'><b>extractCategoryCatalog</b><br>Test class: tests.CategoryExtractionTest<br>Test method: Extract available Languages and Levels from Alison filters<br>Parameters: TC_02, python programming, Beginner, English, Rohan, Verma, rohanvermaatgmail.com, Infosys, , , , , , , HR Manager</td>
+<td><div><pre>java.lang.AssertionError: No Languages Found expected [true] but found [false]
+	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:86)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace197172567", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace197172567'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())=&apos;Language&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62215}, goog:processID: 2108, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62215/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1526c559699c719d7c85d082e36142c8
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.CategoryFilterPage.scrollToFilterGroup(CategoryFilterPage.java:40)
-	at pages.CategoryFilterPage.extractFilterOptionsWithCounts(CategoryFilterPage.java:57)
-	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:52)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1914847495", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1914847495'><pre>java.lang.AssertionError: No Languages Found expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:86)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -187,36 +153,19 @@ Session ID: 1526c559699c719d7c85d082e36142c8
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>25</td>
+<td>7</td>
 <td>tests.CategoryExtractionTest@75db5df9</td></tr>
 <tr>
-<td title='tests.CategoryExtractionTest.extractCategoryCatalog()'><b>extractCategoryCatalog</b><br>Test class: tests.CategoryExtractionTest<br>Test method: Extract Language filter options and corresponding course counts<br>Parameters: TC_02, python programming, Beginner, English, Rohan, Verma, rohanvermaatgmail.com, 9876543211</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())=&apos;Language&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56648}, goog:processID: 25152, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56648/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 227ec593e907c9ab6ec03b0e7c894307
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.CategoryFilterPage.scrollToFilterGroup(CategoryFilterPage.java:40)
-	at pages.CategoryFilterPage.extractFilterOptionsWithCounts(CategoryFilterPage.java:57)
-	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:52)
+<td title='tests.CategoryExtractionTest.extractCategoryCatalog()'><b>extractCategoryCatalog</b><br>Test class: tests.CategoryExtractionTest<br>Test method: Extract available Languages and Levels from Alison filters<br>Parameters: TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, TCS, , , , , , , Learning &Development</td>
+<td><div><pre>java.lang.AssertionError: No Languages Found expected [true] but found [false]
+	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:86)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace516570791", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace516570791'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[normalize-space(text())=&apos;Language&apos;] (tried for 15 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56648}, goog:processID: 25152, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56648/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 227ec593e907c9ab6ec03b0e7c894307
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.CategoryFilterPage.scrollToFilterGroup(CategoryFilterPage.java:40)
-	at pages.CategoryFilterPage.extractFilterOptionsWithCounts(CategoryFilterPage.java:57)
-	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:52)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1922881634", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1922881634'><pre>java.lang.AssertionError: No Languages Found expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at tests.CategoryExtractionTest.extractCategoryCatalog(CategoryExtractionTest.java:86)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -244,7 +193,7 @@ Session ID: 227ec593e907c9ab6ec03b0e7c894307
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>18</td>
+<td>7</td>
 <td>tests.CategoryExtractionTest@75db5df9</td></tr>
 </table><p>
 </body>

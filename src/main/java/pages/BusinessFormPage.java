@@ -1,59 +1,176 @@
 package pages;
- 
+
 import utils.WaitUtils;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
- 
+
 public class BusinessFormPage {
+
     private WebDriver driver;
     private WaitUtils wait;
- 
-    // Real Udemy Business demo form: each field's label text IS its placeholder
-    private By firstNameField = By.cssSelector("input[placeholder=\"First Name *\"]");
-    private By lastNameField = By.cssSelector("input[placeholder='Last Name *']");
-    private By workEmailField = By.cssSelector("input[placeholder='Work Email *']");
-    private By phoneField = By.cssSelector("input[placeholder='Phone Number *']");
-    private By companyNameField = By.cssSelector("input[placeholder='Company Name *']");
-    private By jobTitleField = By.cssSelector("input[placeholder='Job Title *']");
-    private By submitBtn = By.xpath("//button[contains(.,'Submit') or contains(.,'Request') or @type='submit']");
-    private By inlineErrorMessage = By.cssSelector("[class*='error'], [role='alert'], .field-error");
- 
+
+    private By firstNameField =
+            By.xpath("//input[contains(@placeholder,'First Name')]");
+
+    private By lastNameField =
+            By.xpath("//input[contains(@placeholder,'Last Name')]");
+
+    private By emailField =
+            By.xpath("//input[contains(@placeholder,'Business Email')]");
+
+    private By organisationNameField =
+            By.xpath("//input[contains(@placeholder,'Organisation Name')]");
+
+    private By trainingRequirementField =
+            By.tagName("textarea");
+
+    private By departmentDropdown =
+            By.xpath("//*[contains(text(),'Your Department')]");
+
+    private By productDropdown =
+            By.xpath("//*[contains(text(),'Select Product')]");
+
+    private By industryDropdown =
+            By.xpath("//*[contains(text(),'Industry')]");
+
+    private By organisationTypeDropdown =
+            By.xpath("//*[contains(text(),'Organisation Type')]");
+
+    private By organisationSizeDropdown =
+            By.xpath("//*[contains(text(),'Size of the Organisation')]");
+
+    private By countryDropdown =
+            By.xpath("//*[contains(text(),'Country')]");
+
+    private By submitButton =
+            By.xpath("//button[contains(.,'Submit')]");
+
+    private By validationMessage =
+            By.xpath("//*[contains(text(),'valid') or contains(text(),'required')]");
+
     public BusinessFormPage(WebDriver driver) {
+
         this.driver = driver;
-        this.wait = new WaitUtils(driver, 15);
+        this.wait = new WaitUtils(driver, 20);
     }
- 
-    public void fillFirstName(String value) { wait.waitForVisibility(firstNameField).sendKeys(value); }
-    public void fillLastName(String value) { wait.waitForVisibility(lastNameField).sendKeys(value); }
-    public void fillWorkEmail(String value) { wait.waitForVisibility(workEmailField).sendKeys(value); }
-    public void fillPhone(String value) { wait.waitForVisibility(phoneField).sendKeys(value); }
-    public void fillCompanyName(String value) { wait.waitForVisibility(companyNameField).sendKeys(value); }
-    public void fillJobTitle(String value) { wait.waitForVisibility(jobTitleField).sendKeys(value); }
- 
-    /**
-     * Handles the custom "Select..." dropdowns (Where are you located?, Company Size,
-     * Number of people to train, Job Level) -- click-to-open custom components, not native <select>.
-     */
-    public void selectCustomDropdown(String labelText, String optionText) {
-        By dropdownTrigger = By.xpath(
-            "//*[contains(normalize-space(.), '" + labelText + "')]/following::*[contains(normalize-space(.), 'Select...')][1]"
-        );
-        wait.waitForClickability(dropdownTrigger).click();
- 
-        By option = By.xpath("//*[self::li or self::div][contains(normalize-space(.), '" + optionText + "')]");
-        wait.waitForClickability(option).click();
+
+    public void fillFirstName(String value) {
+
+        wait.waitForVisibility(
+                firstNameField)
+                .sendKeys(value);
     }
- 
+
+    public void fillLastName(String value) {
+
+        wait.waitForVisibility(
+                lastNameField)
+                .sendKeys(value);
+    }
+
+    public void fillEmail(String value) {
+
+        wait.waitForVisibility(
+                emailField)
+                .sendKeys(value);
+    }
+
+    public void fillCompanyName(String value) {
+
+        wait.waitForVisibility(
+                organisationNameField)
+                .sendKeys(value);
+    }
+
+    public void fillTrainingRequirement(String value) {
+
+        wait.waitForVisibility(
+                trainingRequirementField)
+                .sendKeys(value);
+    }
+
+    private void selectDropdownOption(
+            By dropdown,
+            String optionText) {
+
+        wait.waitForClickability(
+                dropdown)
+                .click();
+
+        By option =
+                By.xpath(
+                        "//*[contains(text(),'"
+                                + optionText
+                                + "')]");
+
+        wait.waitForClickability(
+                option)
+                .click();
+    }
+
+    public void selectDepartment(String department) {
+
+        selectDropdownOption(
+                departmentDropdown,
+                department);
+    }
+
+    public void selectProduct(String product) {
+
+        selectDropdownOption(
+                productDropdown,
+                product);
+    }
+
+    public void selectIndustry(String industry) {
+
+        selectDropdownOption(
+                industryDropdown,
+                industry);
+    }
+
+    public void selectOrganisationType(String type) {
+
+        selectDropdownOption(
+                organisationTypeDropdown,
+                type);
+    }
+
+    public void selectOrganisationSize(String size) {
+
+        selectDropdownOption(
+                organisationSizeDropdown,
+                size);
+    }
+
+    public void selectCountry(String country) {
+
+        selectDropdownOption(
+                countryDropdown,
+                country);
+    }
+
     public void submitForm() {
-        wait.waitForClickability(submitBtn).click();
+
+        wait.waitForClickability(
+                submitButton)
+                .click();
     }
- 
+
     public String getValidationErrorMessage() {
+
         try {
-            WebElement error = wait.waitForVisibility(inlineErrorMessage);
+
+            WebElement error =
+                    wait.waitForVisibility(
+                            validationMessage);
+
             return error.getText().trim();
+
         } catch (Exception e) {
+
             return "";
         }
     }

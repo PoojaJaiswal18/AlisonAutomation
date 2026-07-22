@@ -17,7 +17,11 @@ public class WindowUtils {
         for (String handle : handles) {
             if (!handle.equals(originalHandle)) {
                 driver.switchTo().window(handle);
-                wait.until(ExpectedConditions.jsReturnsValue("return document.readyState==='complete'"));
+                wait.until(
+                	    d -> ((String)((org.openqa.selenium.JavascriptExecutor)d)
+                	    .executeScript("return document.readyState"))
+                	    .equals("complete")
+                	);
                 return handle;
             }
         }

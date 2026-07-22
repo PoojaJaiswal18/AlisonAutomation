@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="UdemyAutomationSuite" parallel="false">
-  <listeners>
-    <listener class-name="utils.TestListener"/>
-  </listeners>
-  <test name="IdentifyCourses">
-    <classes><class name="tests.IdentifyCoursesTest"/></classes>
-  </test>
-  <test name="CategoryExtraction">
-    <classes><class name="tests.CategoryExtractionTest"/></classes>
-  </test>
-  <test name="BusinessForm">
-    <classes><class name="tests.BusinessFormTest"/></classes>
-  </test>
+
+<suite name="AlisonAutomationSuite"
+       parallel="false">
+
+    <listeners>
+        <listener class-name="utils.TestListener"/>
+    </listeners>
+
+    <test name="AlisonUserJourney">
+
+        <classes>
+
+            <class name="tests.AlisonUserJourneyTest"/>
+
+        </classes>
+
+    </test>
+
 </suite>
- 

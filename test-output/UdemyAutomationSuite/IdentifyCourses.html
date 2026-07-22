@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 21 09:43:38 IST 2026</td>
+<td>Started on:</td><td>Wed Jul 22 10:57:05 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>112 seconds (112171 ms)</td>
+<tr><td>Total time:</td><td>161 seconds (161706 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,31 +76,31 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='tests.IdentifyCoursesTest.identifyTopCourses()'><b>identifyTopCourses</b><br>Test class: tests.IdentifyCoursesTest<br>Test method: Search a keyword, apply Level+Language filters, extract top N courses<br>Parameters: TC_02, python programming, Beginner, English, Rohan, Verma, rohanvermaatgmail.com, 9876543211</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,&apos;ud-toggle-input-container&apos;) and contains(.,&apos;Beginner&apos;)] (tried for 15 second(s) with 500 milliseconds interval)
+<td title='tests.IdentifyCoursesTest.identifyTopCourses()'><b>identifyTopCourses</b><br>Test class: tests.IdentifyCoursesTest<br>Test method: Search, filter, capture hover info and extract course details<br>Parameters: TC_01, web development, Beginner, English, Aisha, Khan, aisha.khan@@test.com, Cognizant, , , , , , , Executive Management</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@data-url-var=&apos;translation&apos;]//label[contains(@data-name,&apos;english&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56232}, goog:processID: 11552, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56232/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 55009abc805d38331e7d22396922d65c
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53202}, goog:processID: 24916, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53202/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 45e6d24997d7022d4c3ba67bc0d353c3
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.SearchResultsPage.applyFilterByText(SearchResultsPage.java:39)
-	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:42)
+	at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
+	at pages.SearchResultsPage.applyLanguageFilter(SearchResultsPage.java:99)
+	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:75)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2025198278", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2025198278'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,&apos;ud-toggle-input-container&apos;) and contains(.,&apos;Beginner&apos;)] (tried for 15 second(s) with 500 milliseconds interval)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1973471376", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1973471376'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@data-url-var=&apos;translation&apos;]//label[contains(@data-name,&apos;english&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56232}, goog:processID: 11552, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56232/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 55009abc805d38331e7d22396922d65c
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53202}, goog:processID: 24916, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53202/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 45e6d24997d7022d4c3ba67bc0d353c3
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.SearchResultsPage.applyFilterByText(SearchResultsPage.java:39)
-	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:42)
+	at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
+	at pages.SearchResultsPage.applyLanguageFilter(SearchResultsPage.java:99)
+	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:75)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -128,34 +128,34 @@ Session ID: 55009abc805d38331e7d22396922d65c
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>18</td>
+<td>28</td>
 <td>tests.IdentifyCoursesTest@1573f9fc</td></tr>
 <tr>
-<td title='tests.IdentifyCoursesTest.identifyTopCourses()'><b>identifyTopCourses</b><br>Test class: tests.IdentifyCoursesTest<br>Test method: Search a keyword, apply Level+Language filters, extract top N courses<br>Parameters: TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, 9876543212</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,&apos;ud-toggle-input-container&apos;) and contains(.,&apos;Intermediate&apos;)] (tried for 15 second(s) with 500 milliseconds interval)
+<td title='tests.IdentifyCoursesTest.identifyTopCourses()'><b>identifyTopCourses</b><br>Test class: tests.IdentifyCoursesTest<br>Test method: Search, filter, capture hover info and extract course details<br>Parameters: TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, TCS, , , , , , , Learning &Development</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@data-url-var=&apos;translation&apos;]//label[contains(@data-name,&apos;english&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62519}, goog:processID: 15228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62519/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6ba67732f6a968729cf4e5d258932bfc
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62594}, goog:processID: 16648, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62594/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d2bf47ea7504e9deeb272ab9151d4914
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.SearchResultsPage.applyFilterByText(SearchResultsPage.java:39)
-	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:42)
+	at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
+	at pages.SearchResultsPage.applyLanguageFilter(SearchResultsPage.java:99)
+	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:75)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace50173263", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace50173263'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,&apos;ud-toggle-input-container&apos;) and contains(.,&apos;Intermediate&apos;)] (tried for 15 second(s) with 500 milliseconds interval)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1563766240", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1563766240'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@data-url-var=&apos;translation&apos;]//label[contains(@data-name,&apos;english&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62519}, goog:processID: 15228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62519/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 6ba67732f6a968729cf4e5d258932bfc
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62594}, goog:processID: 16648, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62594/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d2bf47ea7504e9deeb272ab9151d4914
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.SearchResultsPage.applyFilterByText(SearchResultsPage.java:39)
-	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:42)
+	at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
+	at pages.SearchResultsPage.applyLanguageFilter(SearchResultsPage.java:99)
+	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:75)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -183,34 +183,34 @@ Session ID: 6ba67732f6a968729cf4e5d258932bfc
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>19</td>
+<td>27</td>
 <td>tests.IdentifyCoursesTest@1573f9fc</td></tr>
 <tr>
-<td title='tests.IdentifyCoursesTest.identifyTopCourses()'><b>identifyTopCourses</b><br>Test class: tests.IdentifyCoursesTest<br>Test method: Search a keyword, apply Level+Language filters, extract top N courses<br>Parameters: TC_01, web development, Beginner, English, Aisha, Khan, aisha.khan@@test.com, 9876543210</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,&apos;ud-toggle-input-container&apos;) and contains(.,&apos;Beginner&apos;)] (tried for 15 second(s) with 500 milliseconds interval)
+<td title='tests.IdentifyCoursesTest.identifyTopCourses()'><b>identifyTopCourses</b><br>Test class: tests.IdentifyCoursesTest<br>Test method: Search, filter, capture hover info and extract course details<br>Parameters: TC_02, python programming, Beginner, English, Rohan, Verma, rohanvermaatgmail.com, Infosys, , , , , , , HR Manager</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@data-url-var=&apos;translation&apos;]//label[contains(@data-name,&apos;english&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53297}, goog:processID: 22564, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53297/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48a674e183ca16b3558f8a5f90e441d2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52498}, goog:processID: 22448, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52498/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1c52f26d5f831ad61f56ca9c02d6a34b
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.SearchResultsPage.applyFilterByText(SearchResultsPage.java:39)
-	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:42)
+	at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
+	at pages.SearchResultsPage.applyLanguageFilter(SearchResultsPage.java:99)
+	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:75)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1530560245", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1530560245'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //label[contains(@class,&apos;ud-toggle-input-container&apos;) and contains(.,&apos;Beginner&apos;)] (tried for 15 second(s) with 500 milliseconds interval)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace823056052", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace823056052'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@data-url-var=&apos;translation&apos;]//label[contains(@data-name,&apos;english&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53297}, goog:processID: 22564, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53297/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 48a674e183ca16b3558f8a5f90e441d2
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52498}, goog:processID: 22448, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52498/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1c52f26d5f831ad61f56ca9c02d6a34b
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForVisibility(WaitUtils.java:20)
-	at pages.SearchResultsPage.applyFilterByText(SearchResultsPage.java:39)
-	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:42)
+	at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
+	at pages.SearchResultsPage.applyLanguageFilter(SearchResultsPage.java:99)
+	at tests.IdentifyCoursesTest.identifyTopCourses(IdentifyCoursesTest.java:75)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -238,7 +238,7 @@ Session ID: 48a674e183ca16b3558f8a5f90e441d2
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>20</td>
+<td>27</td>
 <td>tests.IdentifyCoursesTest@1573f9fc</td></tr>
 </table><p>
 </body>
