@@ -258,26 +258,28 @@ public class SearchResultsPage {
    
     public void openFirstCourseDetails() {
 
-        WebElement card =
-                wait.waitForAllVisible(courseCards)
-                        .get(0);
+        WebElement card =driver.findElements(courseCards).get(0);
+
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});",card);
 
         new Actions(driver)
                 .moveToElement(card)
                 .perform();
 
-        WebElement moreInfo =
-                card.findElement(
-                        moreInfoButton);
+        WebElement moreInfo = card.findElement(moreInfoButton);
 
-        ((JavascriptExecutor) driver)
-                .executeScript(
-                        "arguments[0].click();",
-                        moreInfo);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});",moreInfo);
 
-        System.out.println(
-                "[PASS] Course Opened");
-    }
+        try {
+
+            Thread.sleep(750);
+
+        } catch (Exception e) {
+        }
+
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();",moreInfo);
+
+        System.out.println("[PASS] Course Opened");}
     
     
 
