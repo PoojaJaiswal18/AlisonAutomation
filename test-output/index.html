@@ -103,17 +103,17 @@
                     <div class="method-list-content failed suite-AlisonAutomationSuite">
                       <span>
                         <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AlisonAutomationSuite" title="tests.AlisonUserJourneyTest" class="method navigator-link" hash-for-method="completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Learning &amp;Developmen...)">completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Learning &Developmen...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-AlisonAutomationSuite" title="tests.AlisonUserJourneyTest" class="method navigator-link" hash-for-method="completeJourney(TC_01, web development, Beginner, English, Aisha, Khan, aisha.khan@@test.com, Executive Management, ...)">completeJourney(TC_01, web development, Beginner, English, Aisha, Khan, aisha.khan@@test.com, Executive Management, ...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-AlisonAutomationSuite" title="tests.AlisonUserJourneyTest" class="method navigator-link" hash-for-method="completeJourney(TC_02, python programming, Beginner, English, Rohan, Verma, rohanvermaatgmail.com, HR Manager, , , ,...)">completeJourney(TC_02, python programming, Beginner, English, Rohan, Verma, rohanvermaatgmail.com, HR Manager, , , ,...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AlisonAutomationSuite" title="tests.AlisonUserJourneyTest" class="method navigator-link" hash-for-method="completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Learning &amp;Developmen...)">completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Learning &Developmen...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-AlisonAutomationSuite -->
@@ -136,37 +136,48 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Learning &amp;Developmen...)">
+                  </a> <!-- completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Learning &Developmen...) -->
+                  <span class="method-name">completeJourney</span>
+                  <span class="parameters">(TC_03,data science,Intermediate,English,Neha,Sharma,neha.sharma@nodomain,Learning &Development,,,,,,,API)</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),&apos;Learning &amp;Development&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52649}, goog:processID: 21936, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52649/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2c899ee79dc926690887839dbacc7d97
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
+	at pages.BusinessFormPage.selectDropdownOption(BusinessFormPage.java:108)
+	at pages.BusinessFormPage.selectDepartment(BusinessFormPage.java:115)
+	at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:185)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Complete Alison User Journey)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="completeJourney(TC_01, web development, Beginner, English, Aisha, Khan, aisha.khan@@test.com, Executive Management, ...)">
                   </a> <!-- completeJourney(TC_01, web development, Beginner, English, Aisha, Khan, aisha.khan@@test.com, Executive Management, ...) -->
                   <span class="method-name">completeJourney</span>
                   <span class="parameters">(TC_01,web development,Beginner,English,Aisha,Khan,aisha.khan@@test.com,Executive Management,,,,,,,LMS+)</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
-  (Session info: chrome=149.0.7827.103)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[contains(.,&apos;Submit&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c1c23960528624f9f9fdbf6a268d6829, isElementDisplayed {id=f.E1DDCBBF9D5C323761C5C703E7113C07.d.094DE701084FCE99F345C6F68E95C4E6.e.1668}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53122}, goog:processID: 30576, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53122/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (c1c23960528624f9f9fdbf6a268d6829)] -&gt; xpath: //div[contains(@class,&apos;card--white&apos;)]]
-Session ID: c1c23960528624f9f9fdbf6a268d6829
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
-	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:223)
-	at org.openqa.selenium.support.ui.ExpectedConditions$8.apply(ExpectedConditions.java:218)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at utils.WaitUtils.waitForAllVisible(WaitUtils.java:28)
-	at pages.SearchResultsPage.extractVisibleCourses(SearchResultsPage.java:252)
-	at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:99)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62680}, goog:processID: 2296, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62680/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5a20a9a613d0c8a35c7e5da70ae5e9f3
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
+	at pages.BusinessFormPage.submitForm(BusinessFormPage.java:157)
+	at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:211)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 28 stack frames
+... Removed 25 stack frames
 </div> <!-- stack-trace -->
                   <em>
 (Complete Alison User Journey)                  </em>
@@ -178,43 +189,18 @@ Session ID: c1c23960528624f9f9fdbf6a268d6829
                   </a> <!-- completeJourney(TC_02, python programming, Beginner, English, Rohan, Verma, rohanvermaatgmail.com, HR Manager, , , ,...) -->
                   <span class="method-name">completeJourney</span>
                   <span class="parameters">(TC_02,python programming,Beginner,English,Rohan,Verma,rohanvermaatgmail.com,HR Manager,,,,,,,Free LMS)</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),&apos;Your Department&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),&apos;HR Manager&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57480}, goog:processID: 29424, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57480/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3467dcc4bb4fa4e2fe5514eeab9d7c02
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60743}, goog:processID: 5324, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60743/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2c8b6728b4510bda90a6ca5519e7d710
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 	at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
-	at pages.BusinessFormPage.selectDropdownOption(BusinessFormPage.java:98)
+	at pages.BusinessFormPage.selectDropdownOption(BusinessFormPage.java:108)
 	at pages.BusinessFormPage.selectDepartment(BusinessFormPage.java:115)
-	at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:197)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Complete Alison User Journey)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Learning &amp;Developmen...)">
-                  </a> <!-- completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Learning &Developmen...) -->
-                  <span class="method-name">completeJourney</span>
-                  <span class="parameters">(TC_03,data science,Intermediate,English,Neha,Sharma,neha.sharma@nodomain,Learning &Development,,,,,,,API)</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),&apos;Your Department&apos;)] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61921}, goog:processID: 32756, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61921/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2b768996b34ee0aed8b902e8518d4b44
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
-	at pages.BusinessFormPage.selectDropdownOption(BusinessFormPage.java:98)
-	at pages.BusinessFormPage.selectDepartment(BusinessFormPage.java:115)
-	at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:197)
+	at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:185)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 25 stack frames
 </div> <!-- stack-trace -->
@@ -283,20 +269,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'completeJourney')
 data.setCell(0, 2, 'tests.AlisonUserJourneyTest')
-data.setCell(0, 3, 153672);
+data.setCell(0, 3, 137412);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'completeJourney')
 data.setCell(1, 2, 'tests.AlisonUserJourneyTest')
-data.setCell(1, 3, 152113);
+data.setCell(1, 3, 132330);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'completeJourney')
 data.setCell(2, 2, 'tests.AlisonUserJourneyTest')
-data.setCell(2, 3, 12687);
+data.setCell(2, 3, 117298);
 window.suiteTableData['AlisonAutomationSuite']= { tableData: data, tableDiv: 'times-div-AlisonAutomationSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
               <div id="times-div-AlisonAutomationSuite">
               </div> <!-- times-div-AlisonAutomationSuite -->
             </div> <!-- times-div -->
@@ -331,39 +317,39 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">completeJourney(TC_01, web development, Beginner, English, Aisha, Khan, aisha.khan@@test.com, Executive Management, ...)</span>
-                <span class="method-start">14851 ms</span>
+                <span class="method-start">12537 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">29615 ms</span>
+                <span class="method-start">130168 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">38750 ms</span>
+                <span class="method-start">139972 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">completeJourney(TC_02, python programming, Beginner, English, Rohan, Verma, rohanvermaatgmail.com, HR Manager, , , ,...)</span>
-                <span class="method-start">49830 ms</span>
+                <span class="method-start">172306 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">202476 ms</span>
+                <span class="method-start">310108 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">212985 ms</span>
+                <span class="method-start">320156 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Learning &Developmen...)</span>
-                <span class="method-start">222721 ms</span>
+                <span class="method-start">336040 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">376701 ms</span>
+                <span class="method-start">468623 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

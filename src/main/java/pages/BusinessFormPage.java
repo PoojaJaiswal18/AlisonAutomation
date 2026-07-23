@@ -27,22 +27,22 @@ public class BusinessFormPage {
             By.tagName("textarea");
 
     private By departmentDropdown =
-            By.xpath("//*[contains(text(),'Your Department')]");
+            By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-6 ng-star-inserted\"]");
 
     private By productDropdown =
-            By.xpath("//*[contains(text(),'Select Product')]");
+            By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-8 ng-star-inserted\"]");
 
     private By industryDropdown =
-            By.xpath("//*[contains(text(),'Industry')]");
+            By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-10 ng-star-inserted\"]");
 
     private By organisationTypeDropdown =
-            By.xpath("//*[contains(text(),'Organisation Type')]");
+            By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-13 ng-star-inserted\"]");
 
     private By organisationSizeDropdown =
-            By.xpath("//*[contains(text(),'Size of the Organisation')]");
+            By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-15 ng-star-inserted\"]");
 
     private By countryDropdown =
-            By.xpath("//*[contains(text(),'Country')]");
+            By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-17 ng-star-inserted\"]");
 
     private By submitButton =
             By.xpath("//button[contains(.,'Submit')]");
