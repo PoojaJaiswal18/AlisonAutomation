@@ -1,7 +1,5 @@
 package tests;
 
-import com.aventstack.extentreports.Status;
-
 import base.BasePage;
 
 import model.CourseData;
@@ -16,8 +14,6 @@ import pages.HomePage;
 import pages.SearchResultsPage;
 
 import utils.ExcelUtils;
-import utils.ExtentManager;
-
 import java.util.List;
 import java.util.Map;
 
@@ -54,10 +50,7 @@ public class AlisonUserJourneyTest extends BasePage {
             String trainingRequirement,
             String correctEmail) {
 
-        ExtentManager.getTest().log(
-                Status.INFO,
-                "Executing Journey : "
-                        + testCaseId);
+    	System.out.println("Executing Journey : " + testCaseId);
 
         System.out.println(
                 "==========================================");
@@ -263,40 +256,17 @@ public class AlisonUserJourneyTest extends BasePage {
         String validationMessage =
                 form.getValidationErrorMessage();
 
-        ExcelUtils.appendResult(
-                EXCEL_PATH,
-                "TestResults",
-                testCaseId,
-                "FORM",
-                validationMessage,
-                "",
-                "",
-                validationMessage.isEmpty()
-                        ? "PASS"
-                        : "FAIL");
-
-        /*
-         * Report Only
-         */
-
+        ExcelUtils.appendResult( EXCEL_PATH,"TestResults",testCaseId,"FORM", validationMessage, "","",validationMessage.isEmpty()? "PASS": "FAIL");
+        
         if (!validationMessage.isEmpty()) {
 
-            ExtentManager.getTest()
-                    .warning(
-                            validationMessage);
+            System.out.println("[INFO] Validation Message : "+ validationMessage);
 
         } else {
 
-            ExtentManager.getTest()
-                    .pass(
-                            "Form Submitted Successfully");
+            System.out.println("[PASS] Form Submitted Successfully");
         }
 
-        ExtentManager.getTest().pass(
-                "Journey Completed Successfully");
-
-        System.out.println(
-                "USER JOURNEY COMPLETE : "
-                        + testCaseId);
+        System.out.println( "USER JOURNEY COMPLETE : "+ testCaseId);
 }
     }

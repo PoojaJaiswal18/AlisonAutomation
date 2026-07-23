@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-AlisonAutomationSuite" class="navigator-link">
-              <span class="suite-name border-passed">AlisonAutomationSuite</span>
+              <span class="suite-name border-failed">AlisonAutomationSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-AlisonAutomationSuite" class="hide-methods failed suite-AlisonAutomationSuite"> (hide)</a> <!-- hide-methods failed suite-AlisonAutomationSuite -->
+                      <a href="#" panel-name="suite-AlisonAutomationSuite" class="show-methods failed suite-AlisonAutomationSuite"> (show)</a> <!-- show-methods failed suite-AlisonAutomationSuite -->
+                    </span>
+                    <div class="method-list-content failed suite-AlisonAutomationSuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AlisonAutomationSuite" title="tests.AlisonUserJourneyTest" class="method navigator-link" hash-for-method="completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Sales, API, Manufact...)">completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Sales, API, Manufact...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-AlisonAutomationSuite" title="tests.AlisonUserJourneyTest" class="method navigator-link" hash-for-method="completeJourney(TC_01, web development, Beginner, English, Aisha, Khanna, aisha.khanna@@test.com, Executive Manageme...)">completeJourney(TC_01, web development, Beginner, English, Aisha, Khanna, aisha.khanna@@test.com, Executive Manageme...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-AlisonAutomationSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,17 +122,7 @@
                     <div class="method-list-content passed suite-AlisonAutomationSuite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AlisonAutomationSuite" title="tests.AlisonUserJourneyTest" class="method navigator-link" hash-for-method="completeJourney(TC_01, web development, Beginner, English, Aisha, Khanna, aisha.khanna@@test.com, Executive Manageme...)">completeJourney(TC_01, web development, Beginner, English, Aisha, Khanna, aisha.khanna@@test.com, Executive Manageme...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-AlisonAutomationSuite" title="tests.AlisonUserJourneyTest" class="method navigator-link" hash-for-method="completeJourney(TC_02, python programming, Advanced, English, Rohan, Verma, rohanvermaatgmail.com, Human Resources (...)">completeJourney(TC_02, python programming, Advanced, English, Rohan, Verma, rohanvermaatgmail.com, Human Resources (...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-AlisonAutomationSuite" title="tests.AlisonUserJourneyTest" class="method navigator-link" hash-for-method="completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Sales, API, Manufact...)">completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Sales, API, Manufact...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-AlisonAutomationSuite -->
@@ -128,6 +137,80 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-AlisonAutomationSuite" class="panel AlisonAutomationSuite">
+          <div class="suite-AlisonAutomationSuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">tests.AlisonUserJourneyTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Sales, API, Manufact...)">
+                  </a> <!-- completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Sales, API, Manufact...) -->
+                  <span class="method-name">completeJourney</span>
+                  <span class="parameters">(TC_03,data science,Intermediate,English,Neha,Sharma,neha.sharma@nodomain,Sales,API,Manufacturing & Engineering,BHEL,Government,501 - 1,000,Singapore,Need analytics and AI learning program for workforce development.,neha.sharma@acmecorp.com)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (635, 661)
+  (Session info: chrome=150.0.7871.47)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [96d00291d2c2f239f79355fcf8c5b45d, clickElement {id=f.2563D95E031033EBA593692CF4543B3C.d.A83743814524565D21DC2FAE0FC389ED.e.4687}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61074}, goog:processID: 16320, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61074/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (96d00291d2c2f239f79355fcf8c5b45d)] -&gt; xpath: //button[@class=&quot;apply-now-button alison-button alison-button-lg alison-accent-hover w-full mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base&quot;]]
+Session ID: 96d00291d2c2f239f79355fcf8c5b45d
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.BusinessFormPage.submitForm(BusinessFormPage.java:177)
+	at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Complete Alison User Journey)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="completeJourney(TC_01, web development, Beginner, English, Aisha, Khanna, aisha.khanna@@test.com, Executive Manageme...)">
+                  </a> <!-- completeJourney(TC_01, web development, Beginner, English, Aisha, Khanna, aisha.khanna@@test.com, Executive Manageme...) -->
+                  <span class="method-name">completeJourney</span>
+                  <span class="parameters">(TC_01,web development,Beginner,English,Aisha,Khanna,aisha.khanna@@test.com,Executive Management,LMS+,Healthcare & Medical,Cognizant,Large Enterprise,201 - 500,Algeria,Need LMS platform for employee onboarding and compliance training.,aisha.khanna@techsolutions.com)</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (635, 634)
+  (Session info: chrome=150.0.7871.47)
+Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a36cd266e2826275316e03fbfe31f7a1, clickElement {id=f.78CA00EDA7CBA8BFA67CC944570CE387.d.382A758D09A32E905BE42208FC2408B2.e.4738}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58249}, goog:processID: 21332, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58249/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a36cd266e2826275316e03fbfe31f7a1)] -&gt; xpath: //button[@class=&quot;apply-now-button alison-button alison-button-lg alison-accent-hover w-full mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base&quot;]]
+Session ID: a36cd266e2826275316e03fbfe31f7a1
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at pages.BusinessFormPage.submitForm(BusinessFormPage.java:177)
+	at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:250)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Complete Alison User Journey)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-AlisonAutomationSuite-class-failed -->
           <div class="suite-AlisonAutomationSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -136,30 +219,10 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="completeJourney(TC_01, web development, Beginner, English, Aisha, Khanna, aisha.khanna@@test.com, Executive Manageme...)">
-                  </a> <!-- completeJourney(TC_01, web development, Beginner, English, Aisha, Khanna, aisha.khanna@@test.com, Executive Manageme...) -->
-                  <span class="method-name">completeJourney</span>
-                  <span class="parameters">(TC_01,web development,Beginner,English,Aisha,Khanna,aisha.khanna@@test.com,Executive Management,LMS+,Healthcare & Medical,Cognizant,Large Enterprise,201 - 500,Algeria,Need LMS platform for employee onboarding and compliance training.,aisha.khanna@techsolutions.com)</span>
-                  <em>
-(Complete Alison User Journey)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="completeJourney(TC_02, python programming, Advanced, English, Rohan, Verma, rohanvermaatgmail.com, Human Resources (...)">
                   </a> <!-- completeJourney(TC_02, python programming, Advanced, English, Rohan, Verma, rohanvermaatgmail.com, Human Resources (...) -->
                   <span class="method-name">completeJourney</span>
                   <span class="parameters">(TC_02,python programming,Advanced,English,Rohan,Verma,rohanvermaatgmail.com,Human Resources (HR),Free LMS,Education & Training,Zero Gravity,NGO,51 - 100,India,Need technical upskilling platform for software engineers.,rohanverma@globallearning.com)</span>
-                  <em>
-(Complete Alison User Journey)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Sales, API, Manufact...)">
-                  </a> <!-- completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Sales, API, Manufact...) -->
-                  <span class="method-name">completeJourney</span>
-                  <span class="parameters">(TC_03,data science,Intermediate,English,Neha,Sharma,neha.sharma@nodomain,Sales,API,Manufacturing & Engineering,BHEL,Government,501 - 1,000,Singapore,Need analytics and AI learning program for workforce development.,neha.sharma@acmecorp.com)</span>
                   <em>
 (Complete Alison User Journey)                  </em>
                 </div> <!-- method-content -->
@@ -225,20 +288,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'completeJourney')
 data.setCell(0, 2, 'tests.AlisonUserJourneyTest')
-data.setCell(0, 3, 95424);
+data.setCell(0, 3, 87944);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'completeJourney')
 data.setCell(1, 2, 'tests.AlisonUserJourneyTest')
-data.setCell(1, 3, 93206);
+data.setCell(1, 3, 68775);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'completeJourney')
 data.setCell(2, 2, 'tests.AlisonUserJourneyTest')
-data.setCell(2, 3, 92235);
+data.setCell(2, 3, 67918);
 window.suiteTableData['AlisonAutomationSuite']= { tableData: data, tableDiv: 'times-div-AlisonAutomationSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-AlisonAutomationSuite">
               </div> <!-- times-div-AlisonAutomationSuite -->
             </div> <!-- times-div -->
@@ -270,36 +333,40 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">completeJourney(TC_01, web development, Beginner, English, Aisha, Khanna, aisha.khanna@@test.com, Executive Manageme...)</span>
-                <span class="method-start">17026 ms</span>
+                <span class="method-start">18973 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">110419 ms</span>
+                <span class="method-start">88105 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">120165 ms</span>
+                <span class="method-start">96117 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">completeJourney(TC_02, python programming, Advanced, English, Rohan, Verma, rohanvermaatgmail.com, Human Resources (...)</span>
-                <span class="method-start">136739 ms</span>
+                <span class="method-start">112247 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">229214 ms</span>
+                <span class="method-start">200311 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">238572 ms</span>
+                <span class="method-start">209127 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">completeJourney(TC_03, data science, Intermediate, English, Neha, Sharma, neha.sharma@nodomain, Sales, API, Manufact...)</span>
-                <span class="method-start">256317 ms</span>
+                <span class="method-start">225132 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">351961 ms</span>
+                <span class="method-start">293308 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
