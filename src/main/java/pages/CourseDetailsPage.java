@@ -3,8 +3,10 @@ package pages;
 import utils.WaitUtils;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.WebElement;
+import java.util.List;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -20,26 +22,54 @@ public class CourseDetailsPage {
             By.xpath("//div[contains(@class,'description')]");
 
     private By duration =
-            By.xpath("//*[contains(text(),'Duration')]/following::*[1]");
+            By.xpath("//li[.//span[contains(@class,'course-avg_duration')]]");
 
     private By modules =
-            By.xpath("//*[contains(text(),'Modules')]/following::*[1]");
+            By.xpath("//div[@class=\"l-mods__module-num\"]");
 
     private By publisher =
-            By.xpath("//*[contains(text(),'Publisher')]/following::*[1]");
+            By.xpath("//span[@class=\"course-publisher l-pub__name\"]");
 
     private By enrollments =
-            By.xpath("//*[contains(text(),'Learners')]/following::*[1]");
+            By.xpath("//span[@class=\"course-enrolled\"]");
 
     public CourseDetailsPage(WebDriver driver) {
+
         this.driver = driver;
         this.wait = new WaitUtils(driver, 20);
     }
+    
+    public String getModuleCount() {
 
-    public Map<String,String> getCourseDetails() {
+        try {
 
-        Map<String,String> data =
+            List<WebElement> moduleList =
+                    driver.findElements(modules);
+
+            return String.valueOf(
+                    moduleList.size());
+
+        } catch (Exception e) {
+
+            return "0";
+        }
+    }
+
+    public Map<String, String> getCourseDetails() {
+
+        Map<String, String> data =
                 new LinkedHashMap<>();
+
+        /*
+         * Allow page content to load completely
+         */
+
+        try {
+
+            Thread.sleep(1500);
+
+        } catch (Exception e) {
+        }
 
         data.put(
                 "Course",
@@ -55,7 +85,7 @@ public class CourseDetailsPage {
 
         data.put(
                 "Modules",
-                getText(modules));
+                getModuleCount());
 
         data.put(
                 "Publisher",
@@ -65,6 +95,9 @@ public class CourseDetailsPage {
                 "Enrollments",
                 getText(enrollments));
 
+        System.out.println(
+                "[PASS] Course Details Extracted");
+
         return data;
     }
 
@@ -72,11 +105,30 @@ public class CourseDetailsPage {
 
         try {
 
-            return wait.waitForVisibility(locator)
-                    .getText()
-                    .trim();
+            WebElement element =
+                    wait.waitForVisibility(locator);
 
-        } catch(Exception e) {
+            ((JavascriptExecutor) driver)
+                    .executeScript(
+                            "arguments[0].scrollIntoView({block:'center'});",
+                            element);
+
+            try {
+
+                Thread.sleep(500);
+
+            } catch (Exception e) {
+            }
+
+            String value =
+                    element.getText()
+                            .trim();
+
+            return value.isEmpty()
+                    ? "N/A"
+                    : value;
+
+        } catch (Exception e) {
 
             return "N/A";
         }
