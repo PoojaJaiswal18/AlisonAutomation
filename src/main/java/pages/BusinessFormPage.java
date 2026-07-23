@@ -45,7 +45,7 @@ public class BusinessFormPage {
             By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-17 ng-star-inserted\"]");
 
     private By submitButton =
-            By.xpath("//button[contains(.,'Submit')]");
+            By.xpath("//button[@class=\"apply-now-button alison-button alison-button-lg alison-accent-hover w-full mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base\"]");
 
     private By validationMessage =
             By.xpath("//*[contains(text(),'valid') or contains(text(),'required')]");
@@ -95,19 +95,74 @@ public class BusinessFormPage {
             By dropdown,
             String optionText) {
 
-        wait.waitForClickability(
-                dropdown)
-                .click();
+        WebElement dropdownElement =
+                wait.waitForClickability(dropdown);
 
-        By option =
-                By.xpath(
-                        "//*[contains(text(),'"
-                                + optionText
-                                + "')]");
+        ((org.openqa.selenium.JavascriptExecutor) driver)
+                .executeScript(
+                        "arguments[0].scrollIntoView({block:'center'});",
+                        dropdownElement);
 
-        wait.waitForClickability(
-                option)
-                .click();
+        dropdownElement.click();
+
+        try {
+
+            Thread.sleep(1000);
+
+        } catch (Exception e) {
+        }
+
+        java.util.List<WebElement> options =
+                driver.findElements(
+                        By.xpath(
+                                "//span[contains(@class,'mdc-list-item__primary-text')]"));
+
+        String expected =
+                optionText
+                        .replaceAll("\\s+", "")
+                        .trim()
+                        .toLowerCase();
+
+        for (WebElement option : options) {
+
+            try {
+
+                String actual =
+                        option.getText()
+                                .replaceAll("\\s+", "")
+                                .trim()
+                                .toLowerCase();
+
+                if (actual.equals(expected)) {
+
+                    ((org.openqa.selenium.JavascriptExecutor) driver)
+                            .executeScript(
+                                    "arguments[0].scrollIntoView({block:'center'});",
+                                    option);
+
+                    try {
+
+                        Thread.sleep(500);
+
+                    } catch (Exception e) {
+                    }
+
+                    option.click();
+
+                    System.out.println(
+                            "[PASS] Selected : "
+                                    + optionText);
+
+                    return;
+                }
+
+            } catch (Exception ignored) {
+            }
+        }
+
+        throw new RuntimeException(
+                "Dropdown option not found : "
+                        + optionText);
     }
 
     public void selectDepartment(String department) {

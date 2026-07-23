@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="3" passed="0" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-23T10:23:46 IST" name="AlisonAutomationSuite" finished-at="2026-07-23T10:27:24 IST" duration-ms="218626">
+  <suite started-at="2026-07-23T14:23:04 IST" name="AlisonAutomationSuite" finished-at="2026-07-23T14:27:12 IST" duration-ms="247296">
     <groups>
     </groups>
-    <test started-at="2026-07-23T10:23:46 IST" name="AlisonUserJourney" finished-at="2026-07-23T10:27:24 IST" duration-ms="218626">
+    <test started-at="2026-07-23T14:23:04 IST" name="AlisonUserJourney" finished-at="2026-07-23T14:27:12 IST" duration-ms="247296">
       <class name="tests.AlisonUserJourneyTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T10:23:47 IST" name="setUp" finished-at="2026-07-23T10:24:04 IST" duration-ms="17524" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T14:23:05 IST" name="setUp" finished-at="2026-07-23T14:23:22 IST" duration-ms="17115" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T10:24:04 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-23T10:25:00 IST" duration-ms="55649" status="FAIL">
+        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T14:23:22 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-23T14:24:51 IST" duration-ms="88664" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -55,60 +55,60 @@
             </param>
             <param index="8">
               <value>
-                <![CDATA[]]>
+                <![CDATA[LMS+]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Healthcare & Medical]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Cognizant]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Large Enterprise]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[]]>
+                <![CDATA[201 - 500]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Algeria]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[LMS+]]>
+                <![CDATA[Need LMS platform for employee onboarding and compliance training.]]>
               </value>
             </param>
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //button[contains(.,'Submit')] (tried for 20 second(s) with 500 milliseconds interval)
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //button[@class="apply-now-button alison-button alison-button-lg alison-accent-hover w-full mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59951}, goog:processID: 26172, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59951/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9bceab293a0f25bc7d131f3c20c6ec15]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58676}, goog:processID: 14332, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58676/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5de9f8342c60688ecef89e2ce4b520c]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[contains(.,'Submit')] (tried for 20 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //button[@class="apply-now-button alison-button alison-button-lg alison-accent-hover w-full mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base"] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59951}, goog:processID: 26172, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59951/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 9bceab293a0f25bc7d131f3c20c6ec15
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58676}, goog:processID: 14332, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58676/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c5de9f8342c60688ecef89e2ce4b520c
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
 at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
-at pages.BusinessFormPage.submitForm(BusinessFormPage.java:157)
+at pages.BusinessFormPage.submitForm(BusinessFormPage.java:212)
 at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:211)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
@@ -142,15 +142,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- completeJourney -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T10:25:00 IST" name="tearDown" finished-at="2026-07-23T10:25:08 IST" duration-ms="7681" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T14:24:51 IST" name="tearDown" finished-at="2026-07-23T14:25:00 IST" duration-ms="8306" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T10:25:08 IST" name="setUp" finished-at="2026-07-23T10:25:24 IST" duration-ms="15499" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T14:25:00 IST" name="setUp" finished-at="2026-07-23T14:25:16 IST" duration-ms="16460" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T10:25:24 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-23T10:25:53 IST" duration-ms="29725" status="FAIL">
+        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T14:25:16 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-23T14:25:30 IST" duration-ms="13513" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -189,66 +189,80 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </param>
             <param index="7">
               <value>
-                <![CDATA[HR Manager]]>
+                <![CDATA[Human Resources (HR)]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Free LMS]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Education & Training]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Zero Gravity]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[]]>
+                <![CDATA[NGO]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[]]>
+                <![CDATA[51 - 100]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[]]>
+                <![CDATA[India]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[Free LMS]]>
+                <![CDATA[Need technical upskilling platform for software engineers.]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //div[@data-url-var='level']//label[contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'advanced')] (tried for 20 second(s) with 500 milliseconds interval)
+              <![CDATA[stale element reference: stale element not found in the current frame
+  (Session info: chrome=150.0.7871.47)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65386}, goog:processID: 24424, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65386/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 91b513f60ad46b51b4183a9cef5071a5]]>
+Command: [5ad66b5596217a5c55bc49a59d5f551c, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.078D0FD9682627A701783C4582E7DD63.d.2909926FA9B8346928C5C767A47B0CE3.e.1716}], script=arguments[0].click();}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65152}, goog:processID: 5720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65152/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ad66b5596217a5c55bc49a59d5f551c]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@data-url-var='level']//label[contains(translate(normalize-space(.),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'),'advanced')] (tried for 20 second(s) with 500 milliseconds interval)
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: chrome=150.0.7871.47)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: '4.21.0', revision: '79ed462ef4'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65386}, goog:processID: 24424, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65386/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 91b513f60ad46b51b4183a9cef5071a5
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
-at pages.SearchResultsPage.applyLevelFilter(SearchResultsPage.java:147)
-at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:91)
+Command: [5ad66b5596217a5c55bc49a59d5f551c, executeScript {args=[{element-6066-11e4-a52e-4f735466cecf=f.078D0FD9682627A701783C4582E7DD63.d.2909926FA9B8346928C5C767A47B0CE3.e.1716}], script=arguments[0].click();}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65152}, goog:processID: 5720, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65152/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5ad66b5596217a5c55bc49a59d5f551c
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:463)
+at pages.SearchResultsPage.openFirstCourseDetails(SearchResultsPage.java:280)
+at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:124)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -277,19 +291,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- completeJourney -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T10:25:54 IST" name="tearDown" finished-at="2026-07-23T10:26:01 IST" duration-ms="7078" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T14:25:30 IST" name="tearDown" finished-at="2026-07-23T14:25:38 IST" duration-ms="7987" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T10:26:01 IST" name="setUp" finished-at="2026-07-23T10:26:25 IST" duration-ms="23818" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T14:25:38 IST" name="setUp" finished-at="2026-07-23T14:25:55 IST" duration-ms="16973" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T10:26:25 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-23T10:27:16 IST" duration-ms="51827" status="FAIL">
+        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T14:25:55 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-23T14:27:03 IST" duration-ms="68130" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -328,67 +342,55 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
             </param>
             <param index="7">
               <value>
-                <![CDATA[Learning &Development]]>
+                <![CDATA[Sales]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[]]>
+                <![CDATA[API]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Manufacturing & Engineering]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[]]>
+                <![CDATA[BHEL]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Government]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[]]>
+                <![CDATA[501 - 1,000]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[]]>
+                <![CDATA[Singapore]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[API]]>
+                <![CDATA[Need analytics and AI learning program for workforce development.]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),'Learning &Development')] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59345}, goog:processID: 27768, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59345/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 32132f988b38cc52ae7cd16b95d4a21b]]>
+              <![CDATA[Expected validation message expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[contains(text(),'Learning &Development')] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '4.21.0', revision: '79ed462ef4'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 150.0.7871.47, chrome: {chromedriverVersion: 150.0.7871.124 (9261fd0a595..., userDataDir: C:\Users\2506400\AppData\Lo...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59345}, goog:processID: 27768, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59345/devtoo..., se:cdpVersion: 150.0.7871.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 32132f988b38cc52ae7cd16b95d4a21b
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at utils.WaitUtils.waitForClickability(WaitUtils.java:24)
-at pages.BusinessFormPage.selectDropdownOption(BusinessFormPage.java:108)
-at pages.BusinessFormPage.selectDepartment(BusinessFormPage.java:115)
-at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:185)
+              <![CDATA[java.lang.AssertionError: Expected validation message expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertFalse(Assert.java:79)
+at tests.AlisonUserJourneyTest.completeJourney(AlisonUserJourneyTest.java:228)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -417,11 +419,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- completeJourney -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T10:27:17 IST" name="tearDown" finished-at="2026-07-23T10:27:24 IST" duration-ms="7750" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@1573f9fc]" started-at="2026-07-23T14:27:03 IST" name="tearDown" finished-at="2026-07-23T14:27:12 IST" duration-ms="8074" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
