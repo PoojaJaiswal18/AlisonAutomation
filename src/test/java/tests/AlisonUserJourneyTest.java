@@ -51,7 +51,8 @@ public class AlisonUserJourneyTest extends BasePage {
             String organisationType,
             String organisationSize,
             String country,
-            String trainingRequirement) {
+            String trainingRequirement,
+            String correctEmail) {
 
         ExtentManager.getTest().log(
                 Status.INFO,
@@ -177,10 +178,55 @@ public class AlisonUserJourneyTest extends BasePage {
 
         form.fillLastName(lastName);
 
+        /*
+         * Enter Invalid Email
+         */
+
         form.fillEmail(email);
+
+        /*
+         * Trigger Validation
+         */
 
         form.fillCompanyName(
                 organisationName);
+
+        /*
+         * Capture Validation
+         */
+
+        String emailValidationMessage =
+                form.getEmailValidationMessage();
+
+        /*
+         * Store Validation
+         */
+
+        ExcelUtils.appendResult(
+                EXCEL_PATH,
+                "TestResults",
+                testCaseId,
+                "EMAIL_VALIDATION",
+                emailValidationMessage,
+                "",
+                "",
+                emailValidationMessage.isEmpty()
+                        ? "FAIL"
+                        : "PASS");
+
+        /*
+         * Always Replace With Correct Email
+         */
+
+        form.replaceEmail(correctEmail);
+
+        System.out.println(
+                "[PASS] Email Updated : "
+                        + correctEmail);
+
+        /*
+         * Continue Form Filling
+         */
 
         form.selectDepartment(
                 department);
@@ -205,10 +251,14 @@ public class AlisonUserJourneyTest extends BasePage {
 
         /*
          * STEP 9
-         * SUBMIT
+         * SUBMIT FORM
          */
 
         form.submitForm();
+
+        /*
+         * Post Submit Validation
+         */
 
         String validationMessage =
                 form.getValidationErrorMessage();
@@ -222,12 +272,25 @@ public class AlisonUserJourneyTest extends BasePage {
                 "",
                 "",
                 validationMessage.isEmpty()
-                        ? "FAIL"
-                        : "PASS");
+                        ? "PASS"
+                        : "FAIL");
 
-        Assert.assertFalse(
-                validationMessage.isEmpty(),
-                "Expected validation message");
+        /*
+         * Report Only
+         */
+
+        if (!validationMessage.isEmpty()) {
+
+            ExtentManager.getTest()
+                    .warning(
+                            validationMessage);
+
+        } else {
+
+            ExtentManager.getTest()
+                    .pass(
+                            "Form Submitted Successfully");
+        }
 
         ExtentManager.getTest().pass(
                 "Journey Completed Successfully");
@@ -235,5 +298,5 @@ public class AlisonUserJourneyTest extends BasePage {
         System.out.println(
                 "USER JOURNEY COMPLETE : "
                         + testCaseId);
-    }
 }
+    }

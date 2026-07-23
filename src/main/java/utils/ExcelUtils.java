@@ -109,7 +109,8 @@ public class ExcelUtils {
                         getCellValue(row, 12),  // OrganisationSize
 
                         getCellValue(row, 13),  // Country
-                        getCellValue(row, 14)   // TrainingRequirement
+                        getCellValue(row, 14),   // TrainingRequirement
+                        getCellValue(row, 15)
                 });
             }
 

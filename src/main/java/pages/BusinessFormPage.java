@@ -11,44 +11,33 @@ public class BusinessFormPage {
     private WebDriver driver;
     private WaitUtils wait;
 
-    private By firstNameField =
-            By.xpath("//input[contains(@placeholder,'First Name')]");
+    private By firstNameField =By.xpath("//input[contains(@placeholder,'First Name')]");
 
-    private By lastNameField =
-            By.xpath("//input[contains(@placeholder,'Last Name')]");
+    private By lastNameField =By.xpath("//input[contains(@placeholder,'Last Name')]");
 
-    private By emailField =
-            By.xpath("//input[contains(@placeholder,'Business Email')]");
+    private By emailField =By.xpath("//input[contains(@placeholder,'Business Email')]");
 
-    private By organisationNameField =
-            By.xpath("//input[contains(@placeholder,'Organisation Name')]");
+    private By organisationNameField =By.xpath("//input[contains(@placeholder,'Organisation Name')]");
 
-    private By trainingRequirementField =
-            By.tagName("textarea");
+    private By trainingRequirementField =By.tagName("textarea");
 
-    private By departmentDropdown =
-            By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-6 ng-star-inserted\"]");
+    private By departmentDropdown =By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-6 ng-star-inserted\"]");
 
-    private By productDropdown =
-            By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-8 ng-star-inserted\"]");
+    private By productDropdown =By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-8 ng-star-inserted\"]");
 
-    private By industryDropdown =
-            By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-10 ng-star-inserted\"]");
+    private By industryDropdown =By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-10 ng-star-inserted\"]");
 
-    private By organisationTypeDropdown =
-            By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-13 ng-star-inserted\"]");
+    private By organisationTypeDropdown =By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-13 ng-star-inserted\"]");
 
-    private By organisationSizeDropdown =
-            By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-15 ng-star-inserted\"]");
+    private By organisationSizeDropdown =By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-15 ng-star-inserted\"]");
 
-    private By countryDropdown =
-            By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-17 ng-star-inserted\"]");
+    private By countryDropdown =By.xpath("//i[@class=\"icon-caret-down alison-select-arrow ng-tns-c777274391-17 ng-star-inserted\"]");
 
-    private By submitButton =
-            By.xpath("//button[@class=\"apply-now-button alison-button alison-button-lg alison-accent-hover w-full mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base\"]");
+    private By submitButton =By.xpath("//button[@class=\"apply-now-button alison-button alison-button-lg alison-accent-hover w-full mdc-button mdc-button--unelevated mat-mdc-unelevated-button mat-primary mat-mdc-button-base\"]");
 
-    private By validationMessage =
-            By.xpath("//*[contains(text(),'valid') or contains(text(),'required')]");
+    private By validationMessage =By.xpath("//*[contains(text(),'valid') or contains(text(),'required')]");
+    
+    private By emailValidationMessage = By.xpath("//mat-error[@class=\"mat-mdc-form-field-error mat-mdc-form-field-bottom-align ng-tns-c3100660499-2 ng-star-inserted\"]");
 
     public BusinessFormPage(WebDriver driver) {
 
@@ -58,37 +47,46 @@ public class BusinessFormPage {
 
     public void fillFirstName(String value) {
 
-        wait.waitForVisibility(
-                firstNameField)
-                .sendKeys(value);
+        wait.waitForVisibility(firstNameField).sendKeys(value);
     }
 
     public void fillLastName(String value) {
 
-        wait.waitForVisibility(
-                lastNameField)
-                .sendKeys(value);
+        wait.waitForVisibility(lastNameField).sendKeys(value);
     }
 
     public void fillEmail(String value) {
 
-        wait.waitForVisibility(
-                emailField)
-                .sendKeys(value);
+        wait.waitForVisibility(emailField).sendKeys(value);
     }
+    
+    public String getEmailValidationMessage() {
 
+        try {
+
+            return wait.waitForVisibility(emailValidationMessage).getText().trim();
+
+        } catch (Exception e) {
+
+            return "";
+        }
+    }
+    
+    public void replaceEmail(String correctEmail) {
+
+        WebElement email =wait.waitForVisibility(emailField);
+        email.clear();
+        email.sendKeys(correctEmail);
+    }
+    
     public void fillCompanyName(String value) {
 
-        wait.waitForVisibility(
-                organisationNameField)
-                .sendKeys(value);
+        wait.waitForVisibility(organisationNameField).sendKeys(value);
     }
 
     public void fillTrainingRequirement(String value) {
 
-        wait.waitForVisibility(
-                trainingRequirementField)
-                .sendKeys(value);
+        wait.waitForVisibility(trainingRequirementField).sendKeys(value);
     }
 
     private void selectDropdownOption(
@@ -98,10 +96,7 @@ public class BusinessFormPage {
         WebElement dropdownElement =
                 wait.waitForClickability(dropdown);
 
-        ((org.openqa.selenium.JavascriptExecutor) driver)
-                .executeScript(
-                        "arguments[0].scrollIntoView({block:'center'});",
-                        dropdownElement);
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});",dropdownElement);
 
         dropdownElement.click();
 
@@ -112,33 +107,19 @@ public class BusinessFormPage {
         } catch (Exception e) {
         }
 
-        java.util.List<WebElement> options =
-                driver.findElements(
-                        By.xpath(
-                                "//span[contains(@class,'mdc-list-item__primary-text')]"));
+        java.util.List<WebElement> options =driver.findElements(By.xpath("//span[contains(@class,'mdc-list-item__primary-text')]"));
 
-        String expected =
-                optionText
-                        .replaceAll("\\s+", "")
-                        .trim()
-                        .toLowerCase();
+        String expected =optionText.replaceAll("\\s+", "").trim().toLowerCase();
 
         for (WebElement option : options) {
 
             try {
 
-                String actual =
-                        option.getText()
-                                .replaceAll("\\s+", "")
-                                .trim()
-                                .toLowerCase();
+                String actual =option.getText().replaceAll("\\s+", "").trim().toLowerCase();
 
                 if (actual.equals(expected)) {
 
-                    ((org.openqa.selenium.JavascriptExecutor) driver)
-                            .executeScript(
-                                    "arguments[0].scrollIntoView({block:'center'});",
-                                    option);
+                    ((org.openqa.selenium.JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});",option);
 
                     try {
 
@@ -149,9 +130,7 @@ public class BusinessFormPage {
 
                     option.click();
 
-                    System.out.println(
-                            "[PASS] Selected : "
-                                    + optionText);
+                    System.out.println("[PASS] Selected : "+ optionText);
 
                     return;
                 }
@@ -160,67 +139,49 @@ public class BusinessFormPage {
             }
         }
 
-        throw new RuntimeException(
-                "Dropdown option not found : "
-                        + optionText);
+        throw new RuntimeException( "Dropdown option not found : "+ optionText);
     }
 
     public void selectDepartment(String department) {
 
-        selectDropdownOption(
-                departmentDropdown,
-                department);
+        selectDropdownOption(departmentDropdown,department);
     }
 
     public void selectProduct(String product) {
 
-        selectDropdownOption(
-                productDropdown,
-                product);
+        selectDropdownOption(productDropdown,product);
     }
 
     public void selectIndustry(String industry) {
 
-        selectDropdownOption(
-                industryDropdown,
-                industry);
+        selectDropdownOption(industryDropdown,industry);
     }
 
     public void selectOrganisationType(String type) {
 
-        selectDropdownOption(
-                organisationTypeDropdown,
-                type);
+        selectDropdownOption(organisationTypeDropdown,type);
     }
 
     public void selectOrganisationSize(String size) {
 
-        selectDropdownOption(
-                organisationSizeDropdown,
-                size);
+        selectDropdownOption(organisationSizeDropdown,size);
     }
 
     public void selectCountry(String country) {
 
-        selectDropdownOption(
-                countryDropdown,
-                country);
+        selectDropdownOption(countryDropdown,country);
     }
 
     public void submitForm() {
 
-        wait.waitForClickability(
-                submitButton)
-                .click();
+        wait.waitForClickability(submitButton).click();
     }
 
     public String getValidationErrorMessage() {
 
         try {
 
-            WebElement error =
-                    wait.waitForVisibility(
-                            validationMessage);
+            WebElement error =wait.waitForVisibility(validationMessage);
 
             return error.getText().trim();
 
