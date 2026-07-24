@@ -6,7 +6,7 @@
        parallel="false">
 
     <listeners>
-        <listener class-name="utils.TestListener"/>
+        <listener class-name="listeners.TestListener"/>
     </listeners>
 
     <test name="AlisonUserJourney">

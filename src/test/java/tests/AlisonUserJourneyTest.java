@@ -1,7 +1,5 @@
 package tests;
 
-import base.BasePage;
-
 import model.CourseData;
 
 import org.testng.Assert;
@@ -17,7 +15,7 @@ import utils.ExcelUtils;
 import java.util.List;
 import java.util.Map;
 
-public class AlisonUserJourneyTest extends BasePage {
+public class AlisonUserJourneyTest extends BaseTest {
 
     @DataProvider(name = "journeyData")
     public Object[][] journeyData() {

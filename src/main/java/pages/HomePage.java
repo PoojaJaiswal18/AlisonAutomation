@@ -1,62 +1,72 @@
 package pages;
 
-import utils.WaitUtils;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class HomePage {
+public class HomePage extends BasePage {
 
-    private WebDriver driver;
-    private WaitUtils wait;
 
-    private By searchBox = By.xpath(
-            "//input[@id=\"autocomplete\"]");
+    private By searchBox =
+            By.xpath("//input[@id='autocomplete']");
 
-  
-    private By forBusinessLink = By.xpath(
-            "//a[contains(@class,'header__lms') and contains(.,'For Business')]");
-    
+    private By forBusinessLink =
+            By.xpath(
+                    "//a[contains(@class,'header__lms') and contains(.,'For Business')]");
+
     private By bookDemoButton =
             By.xpath("//a[@href='/lms/contact-us']");
 
     public HomePage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WaitUtils(driver, 20);
+
+        super(driver);
     }
 
-  
+    /*
+     * Search Course
+     */
+
     public void searchCourse(String keyword) {
 
-        System.out.println("====================================");
-        System.out.println("[STEP] Searching Keyword : " + keyword);
-        System.out.println("====================================");
+        System.out.println(
+                "====================================");
+
+        System.out.println(
+                "[STEP] Searching Keyword : "
+                        + keyword);
+
+        System.out.println(
+                "====================================");
 
         WebElement box =
-                wait.waitForVisibility(searchBox);
+                wait.waitForVisibility(
+                        searchBox);
 
         box.clear();
 
-        box.sendKeys(keyword);
+        box.sendKeys(
+                keyword);
 
-        box.sendKeys(Keys.ENTER);
+        box.sendKeys(
+                Keys.ENTER);
 
         System.out.println(
                 "[INFO] Current URL : "
-                        + driver.getCurrentUrl());
+                        + getCurrentUrl());
 
         System.out.println(
                 "[INFO] Title : "
-                        + driver.getTitle());
+                        + getPageTitle());
 
         System.out.println(
                 "[PASS] Search submitted");
     }
 
-  
+    /*
+     * Navigate To Business Page
+     */
+
     public String goToBusinessPage() {
 
         String currentWindow =
@@ -65,11 +75,12 @@ public class HomePage {
         System.out.println(
                 "[STEP] Navigating To Alison Business");
 
-        WebElement business =
+        WebElement businessLink =
                 wait.waitForClickability(
                         forBusinessLink);
 
-        business.click();
+        jsClick(
+                businessLink);
 
         System.out.println(
                 "[PASS] Business Page Opened");
@@ -78,22 +89,27 @@ public class HomePage {
                 wait.waitForClickability(
                         bookDemoButton);
 
-        ((JavascriptExecutor) driver)
-                .executeScript(
-                        "arguments[0].scrollIntoView({block:'center'});",
-                        demoButton);
+        scrollIntoView(
+                demoButton);
 
-        demoButton.click();
+        jsClick(
+                demoButton);
 
         System.out.println(
                 "[PASS] Book Demo Clicked");
 
         return currentWindow;
     }
+
+    /*
+     * Verify Search Results Page
+     */
+
     public boolean isSearchResultsLoaded() {
 
         String url =
-                driver.getCurrentUrl().toLowerCase();
+                getCurrentUrl()
+                        .toLowerCase();
 
         return url.contains("/courses")
                 || url.contains("/tag");

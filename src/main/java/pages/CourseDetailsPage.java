@@ -1,19 +1,14 @@
 package pages;
 
-import utils.WaitUtils;
-
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import java.util.List;
+
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
-public class CourseDetailsPage {
-
-    private WebDriver driver;
-    private WaitUtils wait;
+public class CourseDetailsPage extends BasePage {
 
     private By title =
             By.tagName("h1");
@@ -22,29 +17,33 @@ public class CourseDetailsPage {
             By.xpath("//div[contains(@class,'description')]");
 
     private By duration =
-            By.xpath("//li[.//span[contains(@class,'course-avg_duration')]]");
+            By.xpath(
+                    "//li[.//span[contains(@class,'course-avg_duration')]]");
 
     private By modules =
-            By.xpath("//div[@class=\"l-mods__module-num\"]");
+            By.xpath(
+                    "//div[@class='l-mods__module-num']");
 
     private By publisher =
-            By.xpath("//span[@class=\"course-publisher l-pub__name\"]");
+            By.xpath(
+                    "//span[@class='course-publisher l-pub__name']");
 
     private By enrollments =
-            By.xpath("//span[@class=\"course-enrolled\"]");
+            By.xpath(
+                    "//span[@class='course-enrolled']");
 
     public CourseDetailsPage(WebDriver driver) {
 
-        this.driver = driver;
-        this.wait = new WaitUtils(driver, 20);
+        super(driver);
     }
-    
+
     public String getModuleCount() {
 
         try {
 
             List<WebElement> moduleList =
-                    driver.findElements(modules);
+                    driver.findElements(
+                            modules);
 
             return String.valueOf(
                     moduleList.size());
@@ -106,12 +105,11 @@ public class CourseDetailsPage {
         try {
 
             WebElement element =
-                    wait.waitForVisibility(locator);
+                    wait.waitForVisibility(
+                            locator);
 
-            ((JavascriptExecutor) driver)
-                    .executeScript(
-                            "arguments[0].scrollIntoView({block:'center'});",
-                            element);
+            scrollIntoView(
+                    element);
 
             try {
 

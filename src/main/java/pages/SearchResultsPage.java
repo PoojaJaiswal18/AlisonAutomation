@@ -1,10 +1,8 @@
 package pages;
 
 import model.CourseData;
-import utils.WaitUtils;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -12,41 +10,48 @@ import org.openqa.selenium.interactions.Actions;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchResultsPage {
-
-    private WebDriver driver;
-    private WaitUtils wait;
+public class SearchResultsPage extends BasePage {
 
     /*
      * FILTERS
      */
 
-    private By languageFilter = By.xpath("//div[@data-url-var='translation']");
+    private By languageFilter =
+            By.xpath("//div[@data-url-var='translation']");
 
-    private By levelFilter =By.xpath("//div[@data-url-var='level']");
+    private By levelFilter =
+            By.xpath("//div[@data-url-var='level']");
 
-    private By languageHeading =By.xpath("//div[@data-url-var='translation']//span[contains(@class,'filter-heading')]");
+    private By languageHeading =
+            By.xpath(
+                    "//div[@data-url-var='translation']//span[contains(@class,'filter-heading')]");
 
-    private By levelHeading =By.xpath("//div[@data-url-var='level']//span[contains(@class,'filter-heading')]");
+    private By levelHeading =
+            By.xpath(
+                    "//div[@data-url-var='level']//span[contains(@class,'filter-heading')]");
 
     /*
      * COURSE CARDS
      */
 
-    private By courseCards =By.xpath("//div[contains(@class,'card--white')]");
+    private By courseCards =
+            By.xpath("//div[contains(@class,'card--white')]");
 
-    private By courseTitle =By.xpath(".//div[contains(@class,'card__top')]//h3");
+    private By courseTitle =
+            By.xpath(".//div[contains(@class,'card__top')]//h3");
 
-    private By courseDuration =By.xpath(".//*[contains(text(),'hrs')]");
+    private By courseDuration =
+            By.xpath(".//*[contains(text(),'hrs')]");
 
-    private By courseLearners =By.xpath(".//*[contains(text(),'learners')]");
+    private By courseLearners =
+            By.xpath(".//*[contains(text(),'learners')]");
 
-    private By moreInfoButton = By.xpath(".//a[contains(@class,'card__more')]");
+    private By moreInfoButton =
+            By.xpath(".//a[contains(@class,'card__more')]");
 
     public SearchResultsPage(WebDriver driver) {
 
-        this.driver = driver;
-        this.wait = new WaitUtils(driver, 20);
+        super(driver);
     }
 
     private void scrollToFilter(By filterLocator) {
@@ -54,10 +59,7 @@ public class SearchResultsPage {
         WebElement filter =
                 wait.waitForVisibility(filterLocator);
 
-        ((JavascriptExecutor) driver)
-                .executeScript(
-                        "arguments[0].scrollIntoView({block:'center'});",
-                        filter);
+        scrollIntoView(filter);
 
         try {
 
@@ -77,10 +79,7 @@ public class SearchResultsPage {
                 wait.waitForClickability(
                         headingLocator);
 
-        ((JavascriptExecutor) driver)
-                .executeScript(
-                        "arguments[0].click();",
-                        heading);
+        jsClick(heading);
 
         try {
 
@@ -113,10 +112,7 @@ public class SearchResultsPage {
         WebElement element =
                 wait.waitForClickability(option);
 
-        ((JavascriptExecutor) driver)
-                .executeScript(
-                        "arguments[0].click();",
-                        element);
+        jsClick(element);
 
         System.out.println(
                 "[PASS] Language Applied : "
@@ -146,10 +142,7 @@ public class SearchResultsPage {
         WebElement element =
                 wait.waitForClickability(option);
 
-        ((JavascriptExecutor) driver)
-                .executeScript(
-                        "arguments[0].click();",
-                        element);
+        jsClick(element);
 
         System.out.println(
                 "[PASS] Level Applied : "
@@ -219,12 +212,10 @@ public class SearchResultsPage {
     public void scrollUntilCardsVisible() {
 
         WebElement card =
-                wait.waitForVisibility(courseCards);
+                wait.waitForVisibility(
+                        courseCards);
 
-        ((JavascriptExecutor) driver)
-                .executeScript(
-                        "arguments[0].scrollIntoView({block:'center'});",
-                        card);
+        scrollIntoView(card);
     }
 
     public List<CourseData> extractVisibleCourses(
@@ -233,7 +224,8 @@ public class SearchResultsPage {
         scrollUntilCardsVisible();
 
         List<WebElement> cards =
-                wait.waitForAllVisible(courseCards);
+                wait.waitForAllVisible(
+                        courseCards);
 
         List<CourseData> courses =
                 new ArrayList<>();
@@ -255,20 +247,24 @@ public class SearchResultsPage {
         return courses;
     }
 
-   
     public void openFirstCourseDetails() {
 
-        WebElement card =driver.findElements(courseCards).get(0);
+        WebElement card =
+                driver.findElements(
+                        courseCards)
+                        .get(0);
 
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});",card);
+        scrollIntoView(card);
 
         new Actions(driver)
                 .moveToElement(card)
                 .perform();
 
-        WebElement moreInfo = card.findElement(moreInfoButton);
+        WebElement moreInfo =
+                card.findElement(
+                        moreInfoButton);
 
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});",moreInfo);
+        scrollIntoView(moreInfo);
 
         try {
 
@@ -277,16 +273,17 @@ public class SearchResultsPage {
         } catch (Exception e) {
         }
 
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();",moreInfo);
+        jsClick(moreInfo);
 
-        System.out.println("[PASS] Course Opened");}
-    
-    
+        System.out.println(
+                "[PASS] Course Opened");
+    }
 
     public String getFirstCourseTitle() {
 
         return safeGetText(
-                wait.waitForAllVisible(courseCards)
+                wait.waitForAllVisible(
+                        courseCards)
                         .get(0),
                 courseTitle);
     }

@@ -1,6 +1,8 @@
-package utils;
+package listeners;
 
-import base.BasePage;
+import tests.BaseTest;
+import utils.ExcelUtils;
+import utils.ScreenshotUtils;
 
 import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -100,7 +102,7 @@ public class TestListener implements ITestListener {
 
         String testCaseId =(params != null && params.length > 0)? String.valueOf(params[0]): result.getMethod().getMethodName();
 
-        ExcelUtils.appendResult(BasePage.EXCEL_PATH,"TestResults",testCaseId,"RUN_STATUS",notes,"","",status);
+        ExcelUtils.appendResult(BaseTest.EXCEL_PATH,"TestResults",testCaseId,"RUN_STATUS",notes,"","",status);
     }
 
     private WebDriver getDriver(
