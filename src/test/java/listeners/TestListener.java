@@ -76,8 +76,7 @@ public class TestListener implements ITestListener {
             }
         }
 
-        logToExcel(result,"FAIL",
-        		   result.getThrowable() != null? result.getThrowable().getMessage(): "");
+        logToExcel(result,"FAIL", result.getThrowable() != null? result.getThrowable().getMessage(): "");
     }
 
     @Override
@@ -102,11 +101,10 @@ public class TestListener implements ITestListener {
 
         String testCaseId =(params != null && params.length > 0)? String.valueOf(params[0]): result.getMethod().getMethodName();
 
-        ExcelUtils.appendResult(BaseTest.EXCEL_PATH,"TestResults",testCaseId,"RUN_STATUS",notes,"","",status);
+       
     }
 
-    private WebDriver getDriver(
-            ITestResult result) {
+    private WebDriver getDriver(ITestResult result) {
 
         try {
 

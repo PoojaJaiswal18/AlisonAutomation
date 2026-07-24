@@ -1,36 +1,33 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.support.FindBy;
+
 public class CourseDetailsPage extends BasePage {
 
-    private By title =
-            By.tagName("h1");
+    @FindBy(tagName = "h1")
+    private WebElement title;
 
-    private By description =
-            By.xpath("//div[contains(@class,'description')]");
+    @FindBy(xpath = "//div[contains(@class,'description')]")
+    private WebElement description;
 
-    private By duration =
-            By.xpath(
-                    "//li[.//span[contains(@class,'course-avg_duration')]]");
+    @FindBy(xpath = "//li[.//span[contains(@class,'course-avg_duration')]]")
+    private WebElement duration;
 
-    private By modules =
-            By.xpath(
-                    "//div[@class='l-mods__module-num']");
+    @FindBy(xpath = "//div[@class='l-mods__module-num']")
+    private List<WebElement> modules;
 
-    private By publisher =
-            By.xpath(
-                    "//span[@class='course-publisher l-pub__name']");
+    @FindBy(xpath = "//span[@class='course-publisher l-pub__name']")
+    private WebElement publisher;
 
-    private By enrollments =
-            By.xpath(
-                    "//span[@class='course-enrolled']");
+    @FindBy(xpath = "//span[@class='course-enrolled']")
+    private WebElement enrollments;
 
     public CourseDetailsPage(WebDriver driver) {
 
@@ -41,12 +38,7 @@ public class CourseDetailsPage extends BasePage {
 
         try {
 
-            List<WebElement> moduleList =
-                    driver.findElements(
-                            modules);
-
-            return String.valueOf(
-                    moduleList.size());
+            return String.valueOf(modules.size());
 
         } catch (Exception e) {
 
@@ -59,10 +51,6 @@ public class CourseDetailsPage extends BasePage {
         Map<String, String> data =
                 new LinkedHashMap<>();
 
-        /*
-         * Allow page content to load completely
-         */
-
         try {
 
             Thread.sleep(1500);
@@ -70,46 +58,28 @@ public class CourseDetailsPage extends BasePage {
         } catch (Exception e) {
         }
 
-        data.put(
-                "Course",
-                getText(title));
+        data.put("Course",getText(title));
 
-        data.put(
-                "Description",
-                getText(description));
+        data.put("Description",getText(description));
 
-        data.put(
-                "Duration",
-                getText(duration));
+        data.put("Duration",getText(duration));
 
-        data.put(
-                "Modules",
-                getModuleCount());
+        data.put("Modules",getModuleCount());
 
-        data.put(
-                "Publisher",
-                getText(publisher));
+        data.put("Publisher",getText(publisher));
 
-        data.put(
-                "Enrollments",
-                getText(enrollments));
+        data.put("Enrollments",getText(enrollments));
 
-        System.out.println(
-                "[PASS] Course Details Extracted");
+        System.out.println("[PASS] Course Details Extracted");
 
         return data;
     }
 
-    private String getText(By locator) {
+    private String getText(WebElement element) {
 
         try {
 
-            WebElement element =
-                    wait.waitForVisibility(
-                            locator);
-
-            scrollIntoView(
-                    element);
+            scrollIntoView(element);
 
             try {
 
@@ -118,13 +88,9 @@ public class CourseDetailsPage extends BasePage {
             } catch (Exception e) {
             }
 
-            String value =
-                    element.getText()
-                            .trim();
+            String value = element.getText().trim();
 
-            return value.isEmpty()
-                    ? "N/A"
-                    : value;
+            return value.isEmpty()? "N/A": value;
 
         } catch (Exception e) {
 

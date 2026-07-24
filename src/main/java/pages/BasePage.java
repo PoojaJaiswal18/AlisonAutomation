@@ -4,6 +4,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import org.openqa.selenium.support.PageFactory;
+
 import utils.WaitUtils;
 
 public class BasePage {
@@ -15,7 +17,9 @@ public class BasePage {
 
         this.driver = driver;
 
-        this.wait =new WaitUtils(driver,20);
+        this.wait = new WaitUtils(driver,20);
+
+        PageFactory.initElements(driver,this);
     }
 
     protected void scrollIntoView(WebElement element) {
@@ -23,8 +27,7 @@ public class BasePage {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});",element);
     }
 
-    protected void jsClick(
-            WebElement element) {
+    protected void jsClick(WebElement element) {
 
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();",element);
     }
@@ -43,7 +46,7 @@ public class BasePage {
         }
     }
 
-    protected String safeGetText( WebElement element) {
+    protected String safeGetText(WebElement element) {
 
         try {
 

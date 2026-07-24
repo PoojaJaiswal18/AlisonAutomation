@@ -23,8 +23,7 @@ public class BaseTest {
 
 	        options.addArguments("--start-maximized");
 
-	        options.addArguments(
-	                "--disable-blink-features=AutomationControlled");
+	        options.addArguments("--disable-blink-features=AutomationControlled");
 
 	        options.addArguments("--disable-notifications");
 
@@ -47,8 +46,7 @@ public class BaseTest {
 
 	        if (driver != null) {
 
-	            System.out.println(
-	                    "[INFO] Closing Browser");
+	            System.out.println( "[INFO] Closing Browser");
 
 	            driver.quit();
 	        }

@@ -7,57 +7,35 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import org.openqa.selenium.support.FindBy;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class SearchResultsPage extends BasePage {
 
-    /*
-     * FILTERS
-     */
+  
+    @FindBy(xpath = "//div[@data-url-var='translation']")
+    private WebElement languageFilter;
 
-    private By languageFilter =
-            By.xpath("//div[@data-url-var='translation']");
+    @FindBy(xpath = "//div[@data-url-var='level']")
+    private WebElement levelFilter;
 
-    private By levelFilter =
-            By.xpath("//div[@data-url-var='level']");
+    @FindBy(xpath = "//div[@data-url-var='translation']//span[contains(@class,'filter-heading')]")
+    private WebElement languageHeading;
 
-    private By languageHeading =
-            By.xpath(
-                    "//div[@data-url-var='translation']//span[contains(@class,'filter-heading')]");
+    @FindBy(xpath = "//div[@data-url-var='level']//span[contains(@class,'filter-heading')]")
+    private WebElement levelHeading;
 
-    private By levelHeading =
-            By.xpath(
-                    "//div[@data-url-var='level']//span[contains(@class,'filter-heading')]");
-
-    /*
-     * COURSE CARDS
-     */
-
-    private By courseCards =
-            By.xpath("//div[contains(@class,'card--white')]");
-
-    private By courseTitle =
-            By.xpath(".//div[contains(@class,'card__top')]//h3");
-
-    private By courseDuration =
-            By.xpath(".//*[contains(text(),'hrs')]");
-
-    private By courseLearners =
-            By.xpath(".//*[contains(text(),'learners')]");
-
-    private By moreInfoButton =
-            By.xpath(".//a[contains(@class,'card__more')]");
+    @FindBy(xpath = "//div[contains(@class,'card--white')]")
+    private List<WebElement> courseCards;
 
     public SearchResultsPage(WebDriver driver) {
 
         super(driver);
     }
 
-    private void scrollToFilter(By filterLocator) {
-
-        WebElement filter =
-                wait.waitForVisibility(filterLocator);
+    private void scrollToFilter(WebElement filter) {
 
         scrollIntoView(filter);
 
@@ -69,15 +47,9 @@ public class SearchResultsPage extends BasePage {
         }
     }
 
-    private void expandFilter(
-            By filterLocator,
-            By headingLocator) {
+    private void expandFilter(WebElement filter,WebElement heading) {
 
-        scrollToFilter(filterLocator);
-
-        WebElement heading =
-                wait.waitForClickability(
-                        headingLocator);
+        scrollToFilter(filter);
 
         jsClick(heading);
 
@@ -89,84 +61,44 @@ public class SearchResultsPage extends BasePage {
         }
     }
 
-    /*
-     * LANGUAGE
-     */
 
-    public void applyLanguageFilter(
-            String language) {
+    public void applyLanguageFilter( String language) {
 
-        expandFilter(
-                languageFilter,
-                languageHeading);
+        expandFilter(languageFilter,languageHeading);
 
-        By option =
-                By.xpath(
-                        "//div[@data-url-var='translation']//label[" +
-                        "contains(translate(normalize-space(.)," +
-                        "'ABCDEFGHIJKLMNOPQRSTUVWXYZ'," +
-                        "'abcdefghijklmnopqrstuvwxyz'),'" +
-                        language.toLowerCase() +
-                        "')]");
+        By option =By.xpath("//div[@data-url-var='translation']//label[" + "contains(translate(normalize-space(.)," +"'ABCDEFGHIJKLMNOPQRSTUVWXYZ'," +"'abcdefghijklmnopqrstuvwxyz'),'" +language.toLowerCase() +"')]");
 
-        WebElement element =
-                wait.waitForClickability(option);
+        WebElement element =wait.waitForClickability(option);
 
         jsClick(element);
 
-        System.out.println(
-                "[PASS] Language Applied : "
-                        + language);
+        System.out.println("[PASS] Language Applied : "+ language);
     }
 
-    /*
-     * LEVEL
-     */
+    public void applyLevelFilter(String level) {
 
-    public void applyLevelFilter(
-            String level) {
+        expandFilter(levelFilter,levelHeading);
 
-        expandFilter(
-                levelFilter,
-                levelHeading);
+        By option =By.xpath("//div[@data-url-var='level']//label[" +"contains(translate(normalize-space(.)," +"'ABCDEFGHIJKLMNOPQRSTUVWXYZ'," +"'abcdefghijklmnopqrstuvwxyz'),'" +level.toLowerCase() +"')]");
 
-        By option =
-                By.xpath(
-                        "//div[@data-url-var='level']//label[" +
-                        "contains(translate(normalize-space(.)," +
-                        "'ABCDEFGHIJKLMNOPQRSTUVWXYZ'," +
-                        "'abcdefghijklmnopqrstuvwxyz'),'" +
-                        level.toLowerCase() +
-                        "')]");
-
-        WebElement element =
-                wait.waitForClickability(option);
+        WebElement element =wait.waitForClickability(option);
 
         jsClick(element);
 
-        System.out.println(
-                "[PASS] Level Applied : "
-                        + level);
+        System.out.println("[PASS] Level Applied : "+ level);
     }
 
     public List<String> getAvailableLanguages() {
 
-        expandFilter(
-                languageFilter,
-                languageHeading);
+        expandFilter(languageFilter,languageHeading);
 
-        List<WebElement> elements =
-                driver.findElements(
-                        By.xpath(
-                                "//div[@data-url-var='translation']//label"));
+        List<WebElement> elements =driver.findElements(By.xpath( "//div[@data-url-var='translation']//label"));
 
-        List<String> results =
-                new ArrayList<>();
+        List<String> results =new ArrayList<>();
 
         for (WebElement element : elements) {
 
-            String text =
-                    element.getText().trim();
+            String text =element.getText().trim();
 
             if (!text.isEmpty()) {
 
@@ -179,22 +111,15 @@ public class SearchResultsPage extends BasePage {
 
     public List<String> getAvailableLevels() {
 
-        expandFilter(
-                levelFilter,
-                levelHeading);
+        expandFilter(levelFilter,levelHeading);
 
-        List<WebElement> elements =
-                driver.findElements(
-                        By.xpath(
-                                "//div[@data-url-var='level']//label"));
+        List<WebElement> elements = driver.findElements(By.xpath("//div[@data-url-var='level']//label"));
 
-        List<String> results =
-                new ArrayList<>();
+        List<String> results = new ArrayList<>();
 
         for (WebElement element : elements) {
 
-            String text =
-                    element.getText().trim();
+            String text =element.getText().trim();
 
             if (!text.isEmpty()) {
 
@@ -205,43 +130,30 @@ public class SearchResultsPage extends BasePage {
         return results;
     }
 
-    /*
-     * COURSES
-     */
+
 
     public void scrollUntilCardsVisible() {
 
-        WebElement card =
-                wait.waitForVisibility(
-                        courseCards);
+        if (!courseCards.isEmpty()) {
 
-        scrollIntoView(card);
+            scrollIntoView(courseCards.get(0));
+        }
     }
 
-    public List<CourseData> extractVisibleCourses(
-            int count) {
+    public List<CourseData> extractVisibleCourses(int count) {
 
         scrollUntilCardsVisible();
 
-        List<WebElement> cards =
-                wait.waitForAllVisible(
-                        courseCards);
+        List<CourseData> courses =new ArrayList<>();
 
-        List<CourseData> courses =
-                new ArrayList<>();
+        for (int i = 0;i < Math.min(count, courseCards.size());i++) {
 
-        for (int i = 0;
-             i < Math.min(count, cards.size());
-             i++) {
+            WebElement card =courseCards.get(i);
 
-            WebElement card =
-                    cards.get(i);
-
-            courses.add(
-                    new CourseData(
-                            safeGetText(card, courseTitle),
-                            safeGetText(card, courseDuration),
-                            safeGetText(card, courseLearners)));
+            courses.add(new CourseData( 
+            		        safeGetText(card,".//div[contains(@class,'card__top')]//h3"),
+                            safeGetText(card,".//*[contains(text(),'hrs')]"),
+                            safeGetText(card,".//*[contains(text(),'learners')]")));
         }
 
         return courses;
@@ -249,20 +161,13 @@ public class SearchResultsPage extends BasePage {
 
     public void openFirstCourseDetails() {
 
-        WebElement card =
-                driver.findElements(
-                        courseCards)
-                        .get(0);
+        WebElement card =courseCards.get(0);
 
         scrollIntoView(card);
 
-        new Actions(driver)
-                .moveToElement(card)
-                .perform();
+        new Actions(driver).moveToElement(card).perform();
 
-        WebElement moreInfo =
-                card.findElement(
-                        moreInfoButton);
+        WebElement moreInfo =card.findElement(By.xpath(".//a[contains(@class,'card__more')]"));
 
         scrollIntoView(moreInfo);
 
@@ -275,28 +180,19 @@ public class SearchResultsPage extends BasePage {
 
         jsClick(moreInfo);
 
-        System.out.println(
-                "[PASS] Course Opened");
+        System.out.println("[PASS] Course Opened");
     }
 
     public String getFirstCourseTitle() {
 
-        return safeGetText(
-                wait.waitForAllVisible(
-                        courseCards)
-                        .get(0),
-                courseTitle);
+        return safeGetText(courseCards.get(0),".//div[contains(@class,'card__top')]//h3");
     }
 
-    private String safeGetText(
-            WebElement parent,
-            By locator) {
+    private String safeGetText(WebElement parent,String xpath) {
 
         try {
 
-            return parent.findElement(locator)
-                    .getText()
-                    .trim();
+            return parent.findElement(By.xpath(xpath)).getText().trim();
 
         } catch (Exception e) {
 

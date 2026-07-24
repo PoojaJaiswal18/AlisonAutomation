@@ -1,31 +1,27 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class HomePage extends BasePage {
 
+    @FindBy(id = "autocomplete")
+    private WebElement searchBox;
 
-    private By searchBox =
-            By.xpath("//input[@id='autocomplete']");
+    @FindBy(xpath = "//a[contains(@class,'header__lms') and contains(.,'For Business')]")
+    private WebElement forBusinessLink;
 
-    private By forBusinessLink =
-            By.xpath(
-                    "//a[contains(@class,'header__lms') and contains(.,'For Business')]");
-
-    private By bookDemoButton =
-            By.xpath("//a[@href='/lms/contact-us']");
+    @FindBy(xpath = "//a[@href='/lms/contact-us']")
+    private WebElement bookDemoButton;
 
     public HomePage(WebDriver driver) {
 
         super(driver);
     }
 
-    /*
-     * Search Course
-     */
 
     public void searchCourse(String keyword) {
 
@@ -39,79 +35,44 @@ public class HomePage extends BasePage {
         System.out.println(
                 "====================================");
 
-        WebElement box =
-                wait.waitForVisibility(
-                        searchBox);
+        searchBox.clear();
 
-        box.clear();
+        searchBox.sendKeys(keyword);
 
-        box.sendKeys(
-                keyword);
+        searchBox.sendKeys(Keys.ENTER);
 
-        box.sendKeys(
-                Keys.ENTER);
+        System.out.println("[INFO] Current URL : " + getCurrentUrl());
 
-        System.out.println(
-                "[INFO] Current URL : "
-                        + getCurrentUrl());
+        System.out.println("[INFO] Title : "+ getPageTitle());
 
-        System.out.println(
-                "[INFO] Title : "
-                        + getPageTitle());
-
-        System.out.println(
-                "[PASS] Search submitted");
+        System.out.println("[PASS] Search submitted");
     }
 
-    /*
-     * Navigate To Business Page
-     */
 
     public String goToBusinessPage() {
 
-        String currentWindow =
-                driver.getWindowHandle();
+        String currentWindow =driver.getWindowHandle();
 
-        System.out.println(
-                "[STEP] Navigating To Alison Business");
+        System.out.println("[STEP] Navigating To Alison Business");
 
-        WebElement businessLink =
-                wait.waitForClickability(
-                        forBusinessLink);
+        jsClick(forBusinessLink);
 
-        jsClick(
-                businessLink);
+        System.out.println("[PASS] Business Page Opened");
 
-        System.out.println(
-                "[PASS] Business Page Opened");
+        scrollIntoView(bookDemoButton);
 
-        WebElement demoButton =
-                wait.waitForClickability(
-                        bookDemoButton);
+        jsClick(bookDemoButton);
 
-        scrollIntoView(
-                demoButton);
-
-        jsClick(
-                demoButton);
-
-        System.out.println(
-                "[PASS] Book Demo Clicked");
+        System.out.println("[PASS] Book Demo Clicked");
 
         return currentWindow;
     }
 
-    /*
-     * Verify Search Results Page
-     */
 
     public boolean isSearchResultsLoaded() {
 
-        String url =
-                getCurrentUrl()
-                        .toLowerCase();
+        String url = getCurrentUrl().toLowerCase();
 
-        return url.contains("/courses")
-                || url.contains("/tag");
+        return url.contains("/courses")|| url.contains("/tag");
     }
 }

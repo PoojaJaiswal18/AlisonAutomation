@@ -50,28 +50,22 @@ public class AlisonUserJourneyTest extends BaseTest {
 
     	System.out.println("Executing Journey : " + testCaseId);
 
-        System.out.println(
-                "==========================================");
+        System.out.println("==========================================");
 
-        System.out.println(
-                "STARTING USER JOURNEY : "
-                        + testCaseId);
+        System.out.println("STARTING USER JOURNEY : "+ testCaseId);
 
-        System.out.println(
-                "==========================================");
+        System.out.println("==========================================");
 
         /*
          * STEP 1
          * SEARCH COURSE
          */
 
-        HomePage home =
-                new HomePage(driver);
+        HomePage home =new HomePage(driver);
 
         home.searchCourse(keyword);
 
-        SearchResultsPage results =
-                new SearchResultsPage(driver);
+        SearchResultsPage results =new SearchResultsPage(driver);
 
         /*
          * STEP 2
@@ -87,24 +81,13 @@ public class AlisonUserJourneyTest extends BaseTest {
          * EXTRACT COURSES
          */
 
-        List<CourseData> courses =
-                results.extractVisibleCourses(2);
+        List<CourseData> courses =results.extractVisibleCourses(2);
 
-        Assert.assertTrue(
-                courses.size() > 0,
-                "No courses returned");
+        Assert.assertTrue( courses.size() > 0,"No courses returned");
 
         for (CourseData course : courses) {
 
-            ExcelUtils.appendResult(
-                    EXCEL_PATH,
-                    "TestResults",
-                    testCaseId,
-                    "COURSE",
-                    course.getName(),
-                    course.getDuration(),
-                    course.getLearners(),
-                    "PASS");
+            
         }
 
 
@@ -115,33 +98,18 @@ public class AlisonUserJourneyTest extends BaseTest {
 
         results.openFirstCourseDetails();
 
-        CourseDetailsPage detailsPage =
-                new CourseDetailsPage(driver);
+        CourseDetailsPage detailsPage = new CourseDetailsPage(driver);
 
-        Map<String, String> details =
-                detailsPage.getCourseDetails();
+        Map<String, String> details = detailsPage.getCourseDetails();
 
-        ExcelUtils.appendCourseDetails(
-                EXCEL_PATH,
-                testCaseId,
-                details.getOrDefault(
-                        "Course",
-                        ""),
-                details.getOrDefault(
-                        "Description",
-                        ""),
-                details.getOrDefault(
-                        "Duration",
-                        ""),
-                details.getOrDefault(
-                        "Enrollments",
-                        ""),
-                details.getOrDefault(
-                        "Modules",
-                        ""),
-                details.getOrDefault(
-                        "Publisher",
-                        ""));
+        ExcelUtils.appendCourseDetails(EXCEL_PATH,testCaseId,
+        		
+                details.getOrDefault("Course",""),
+                details.getOrDefault("Description",""),
+                details.getOrDefault("Duration",""),
+                details.getOrDefault("Enrollments",""),
+                details.getOrDefault("Modules",""),
+                details.getOrDefault("Publisher",""));
 
         /*
          * STEP 6
@@ -157,8 +125,7 @@ public class AlisonUserJourneyTest extends BaseTest {
 
         home.goToBusinessPage();
 
-        BusinessFormPage form =
-                new BusinessFormPage(driver);
+        BusinessFormPage form = new BusinessFormPage(driver);
 
         /*
          * STEP 8
@@ -169,76 +136,33 @@ public class AlisonUserJourneyTest extends BaseTest {
 
         form.fillLastName(lastName);
 
-        /*
-         * Enter Invalid Email
-         */
-
         form.fillEmail(email);
 
-        /*
-         * Trigger Validation
-         */
+        form.fillCompanyName(organisationName);
 
-        form.fillCompanyName(
-                organisationName);
+        String emailValidationMessage = form.getEmailValidationMessage();
 
-        /*
-         * Capture Validation
-         */
+        System.out.println("Error message encountered:"+ emailValidationMessage);
 
-        String emailValidationMessage =
-                form.getEmailValidationMessage();
-
-        /*
-         * Store Validation
-         */
-
-        ExcelUtils.appendResult(
-                EXCEL_PATH,
-                "TestResults",
-                testCaseId,
-                "EMAIL_VALIDATION",
-                emailValidationMessage,
-                "",
-                "",
-                emailValidationMessage.isEmpty()
-                        ? "FAIL"
-                        : "PASS");
-
-        /*
-         * Always Replace With Correct Email
-         */
 
         form.replaceEmail(correctEmail);
 
-        System.out.println(
-                "[PASS] Email Updated : "
-                        + correctEmail);
+        System.out.println("[PASS] Email Updated : "+ correctEmail);
 
-        /*
-         * Continue Form Filling
-         */
+        
+        form.selectDepartment(department);
 
-        form.selectDepartment(
-                department);
+        form.selectProduct(product);
 
-        form.selectProduct(
-                product);
+        form.selectIndustry(industry);
 
-        form.selectIndustry(
-                industry);
+        form.selectOrganisationType(organisationType);
 
-        form.selectOrganisationType(
-                organisationType);
+        form.selectOrganisationSize(organisationSize);
 
-        form.selectOrganisationSize(
-                organisationSize);
+        form.selectCountry(country);
 
-        form.selectCountry(
-                country);
-
-        form.fillTrainingRequirement(
-                trainingRequirement);
+        form.fillTrainingRequirement( trainingRequirement);
 
         /*
          * STEP 9
@@ -251,10 +175,9 @@ public class AlisonUserJourneyTest extends BaseTest {
          * Post Submit Validation
          */
 
-        String validationMessage =
-                form.getValidationErrorMessage();
+        String validationMessage =form.getValidationErrorMessage();
 
-        ExcelUtils.appendResult( EXCEL_PATH,"TestResults",testCaseId,"FORM", validationMessage, "","",validationMessage.isEmpty()? "PASS": "FAIL");
+       
         
         if (!validationMessage.isEmpty()) {
 
