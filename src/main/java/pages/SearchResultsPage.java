@@ -13,7 +13,6 @@ import java.util.List;
 
 public class SearchResultsPage extends BasePage {
 
-
     @FindBy(xpath = "//div[@data-url-var='translation']")
     private WebElement languageFilter;
 
@@ -26,29 +25,22 @@ public class SearchResultsPage extends BasePage {
     @FindBy(xpath = "//div[@data-url-var='level']//span[contains(@class,'filter-heading')]")
     private WebElement levelHeading;
 
-  
-    private By courseCards =
-            By.xpath("//div[contains(@class,'card--white')]");
+    private final By courseCards =By.xpath("//div[contains(@class,'card--white')]");
 
-    private By courseTitle =
-            By.xpath(".//div[contains(@class,'card__top')]//h3");
+    private final By courseTitle =By.xpath(".//div[contains(@class,'card__top')]//h3");
 
-    private By courseDuration =
-            By.xpath(".//*[contains(text(),'hrs')]");
+    private final By courseDuration =By.xpath(".//*[contains(text(),'hrs')]");
 
-    private By courseLearners =
-            By.xpath(".//*[contains(text(),'learners')]");
+    private final By courseLearners =By.xpath(".//*[contains(text(),'learners')]");
 
-    private By moreInfoButton =
-            By.xpath(".//a[contains(@class,'card__more')]");
+    private final By moreInfoButton =By.xpath(".//a[contains(@class,'card__more')]");
 
     public SearchResultsPage(WebDriver driver) {
 
         super(driver);
     }
 
-    private void scrollToFilter(
-            WebElement filter) {
+    private void scrollToFilter(WebElement filter) {
 
         wait.waitForVisibility(filter);
 
@@ -74,66 +66,94 @@ public class SearchResultsPage extends BasePage {
 
         try {
 
-            Thread.sleep(800);
+            Thread.sleep(1000);
 
         } catch (Exception e) {
         }
     }
 
+    public void applyLanguageFilter(String language) {
 
-    public void applyLanguageFilter(
-            String language) {
+        expandFilter(
+                languageFilter,
+                languageHeading);
 
-        expandFilter(languageFilter,languageHeading);
+        By option =
+                By.xpath(
+                        "//div[@data-url-var='translation']//label[" +
+                        "contains(translate(normalize-space(.)," +
+                        "'ABCDEFGHIJKLMNOPQRSTUVWXYZ'," +
+                        "'abcdefghijklmnopqrstuvwxyz'),'" +
+                        language.toLowerCase() +
+                        "')]");
 
-        By option =By.xpath("//div[@data-url-var='translation']//label[" +
-                                "contains(translate(normalize-space(.)," +
-                                "'ABCDEFGHIJKLMNOPQRSTUVWXYZ'," +
-                                "'abcdefghijklmnopqrstuvwxyz'),'" +
-                                language.toLowerCase() +"')]");
-
-        WebElement element = wait.waitForClickability(option);
+        WebElement element =
+                wait.waitForClickability(option);
 
         jsClick(element);
+
+        try {
+
+            Thread.sleep(3000);
+
+        } catch (Exception e) {
+        }
 
         System.out.println(
                 "[PASS] Language Applied : "
                         + language);
     }
 
-
-
-    public void applyLevelFilter(
-            String level) {
+    public void applyLevelFilter(String level) {
 
         expandFilter(
                 levelFilter,
                 levelHeading);
 
-        By option = By.xpath("//div[@data-url-var='level']//label[" +
-                                "contains(translate(normalize-space(.)," +
-                                "'ABCDEFGHIJKLMNOPQRSTUVWXYZ'," +
-                                "'abcdefghijklmnopqrstuvwxyz'),'" +
-                                level.toLowerCase() +"')]");
+        By option =
+                By.xpath(
+                        "//div[@data-url-var='level']//label[" +
+                        "contains(translate(normalize-space(.)," +
+                        "'ABCDEFGHIJKLMNOPQRSTUVWXYZ'," +
+                        "'abcdefghijklmnopqrstuvwxyz'),'" +
+                        level.toLowerCase() +
+                        "')]");
 
-        WebElement element =wait.waitForClickability(option);
+        WebElement element =
+                wait.waitForClickability(option);
 
         jsClick(element);
 
-        System.out.println("[PASS] Level Applied : "+ level);
+        try {
+
+            Thread.sleep(3000);
+
+        } catch (Exception e) {
+        }
+
+        System.out.println(
+                "[PASS] Level Applied : "
+                        + level);
     }
 
     public List<String> getAvailableLanguages() {
 
-        expandFilter(languageFilter,languageHeading);
+        expandFilter(
+                languageFilter,
+                languageHeading);
 
-        List<WebElement> elements =driver.findElements(By.xpath("//div[@data-url-var='translation']//label"));
+        List<WebElement> elements =
+                driver.findElements(
+                        By.xpath(
+                                "//div[@data-url-var='translation']//label"));
 
-        List<String> results =new ArrayList<>();
+        List<String> results =
+                new ArrayList<>();
 
         for (WebElement element : elements) {
 
-            String text =element.getText().trim();
+            String text =
+                    element.getText().trim();
 
             if (!text.isEmpty()) {
 
@@ -146,15 +166,22 @@ public class SearchResultsPage extends BasePage {
 
     public List<String> getAvailableLevels() {
 
-        expandFilter(levelFilter,levelHeading);
+        expandFilter(
+                levelFilter,
+                levelHeading);
 
-        List<WebElement> elements =driver.findElements(By.xpath("//div[@data-url-var='level']//label"));
+        List<WebElement> elements =
+                driver.findElements(
+                        By.xpath(
+                                "//div[@data-url-var='level']//label"));
 
-        List<String> results =new ArrayList<>();
+        List<String> results =
+                new ArrayList<>();
 
         for (WebElement element : elements) {
 
-            String text =element.getText().trim();
+            String text =
+                    element.getText().trim();
 
             if (!text.isEmpty()) {
 
@@ -165,10 +192,10 @@ public class SearchResultsPage extends BasePage {
         return results;
     }
 
-
     public void scrollUntilCardsVisible() {
 
-        WebElement firstCard =wait.waitForVisibility(courseCards);
+        WebElement firstCard =
+                wait.waitForVisibility(courseCards);
 
         scrollIntoView(firstCard);
     }
@@ -177,17 +204,31 @@ public class SearchResultsPage extends BasePage {
 
         scrollUntilCardsVisible();
 
-        List<WebElement> cards =wait.waitForAllVisible(courseCards);
+        try {
 
-        List<CourseData> courses =new ArrayList<>();
+            Thread.sleep(2000);
 
-        for (int i = 0;i < Math.min(count, cards.size()); i++) {
+        } catch (Exception e) {
+        }
 
-            WebElement card =cards.get(i);
+        List<WebElement> cards =
+                driver.findElements(courseCards);
 
-            courses.add(new CourseData(safeGetText(card,courseTitle),
-                            safeGetText(card,courseDuration),
-                            safeGetText(card,courseLearners)));
+        List<CourseData> courses =
+                new ArrayList<>();
+
+        for (int i = 0;
+             i < Math.min(count, cards.size());
+             i++) {
+
+            WebElement card =
+                    cards.get(i);
+
+            courses.add(
+                    new CourseData(
+                            safeGetText(card, courseTitle),
+                            safeGetText(card, courseDuration),
+                            safeGetText(card, courseLearners)));
         }
 
         return courses;
@@ -195,42 +236,56 @@ public class SearchResultsPage extends BasePage {
 
     public void openFirstCourseDetails() {
 
-        List<WebElement> cards =wait.waitForAllVisible(courseCards);
+        List<WebElement> cards =
+                driver.findElements(courseCards);
 
-        WebElement card =cards.get(0);
+        WebElement card =
+                cards.get(0);
 
         scrollIntoView(card);
 
-        new Actions(driver).moveToElement(card).perform();
+        new Actions(driver)
+                .moveToElement(card)
+                .perform();
 
-        WebElement moreInfo =card.findElement( moreInfoButton);
+        WebElement moreInfo =
+                card.findElement(
+                        moreInfoButton);
 
         scrollIntoView(moreInfo);
 
         try {
 
-            Thread.sleep(750);
+            Thread.sleep(1000);
 
         } catch (Exception e) {
         }
 
         jsClick(moreInfo);
 
-        System.out.println( "[PASS] Course Opened");
+        System.out.println(
+                "[PASS] Course Opened");
     }
 
     public String getFirstCourseTitle() {
 
-        List<WebElement> cards =wait.waitForAllVisible(courseCards);
+        List<WebElement> cards =
+                driver.findElements(courseCards);
 
-        return safeGetText(cards.get(0),courseTitle);
+        return safeGetText(
+                cards.get(0),
+                courseTitle);
     }
 
-    private String safeGetText( WebElement parent,By locator) {
+    private String safeGetText(
+            WebElement parent,
+            By locator) {
 
         try {
 
-            return parent.findElement(locator).getText().trim();
+            return parent.findElement(locator)
+                    .getText()
+                    .trim();
 
         } catch (Exception e) {
 
