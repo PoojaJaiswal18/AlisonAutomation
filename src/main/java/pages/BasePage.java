@@ -22,6 +22,7 @@ public class BasePage {
         PageFactory.initElements(driver,this);
     }
 
+   
     protected void scrollIntoView(WebElement element) {
 
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block:'center'});",element);

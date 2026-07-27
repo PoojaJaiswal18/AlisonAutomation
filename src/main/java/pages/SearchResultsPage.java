@@ -119,8 +119,7 @@ public class SearchResultsPage extends BasePage {
                         level.toLowerCase() +
                         "')]");
 
-        WebElement element =
-                wait.waitForClickability(option);
+        WebElement element = wait.waitForClickability(option);
 
         jsClick(element);
 

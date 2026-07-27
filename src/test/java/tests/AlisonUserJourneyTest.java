@@ -56,45 +56,25 @@ public class AlisonUserJourneyTest extends BaseTest {
 
         System.out.println("==========================================");
 
-        /*
-         * STEP 1
-         * SEARCH COURSE
-         */
-
+   
         HomePage home =new HomePage(driver);
 
         home.searchCourse(keyword);
 
         SearchResultsPage results =new SearchResultsPage(driver);
 
-        /*
-         * STEP 2
-         * APPLY FILTERS
-         */
-
         results.applyLanguageFilter(language);
 
         results.applyLevelFilter(level);
 
-        /*
-         * STEP 3
-         * EXTRACT COURSES
-         */
+      
 
         List<CourseData> courses =results.extractVisibleCourses(2);
 
         Assert.assertTrue( courses.size() > 0,"No courses returned");
 
-        for (CourseData course : courses) {
+       
 
-            
-        }
-
-
-        /*
-         * STEP 5
-         * COURSE DETAILS
-         */
 
         results.openFirstCourseDetails();
 
@@ -111,26 +91,14 @@ public class AlisonUserJourneyTest extends BaseTest {
                 details.getOrDefault("Modules",""),
                 details.getOrDefault("Publisher",""));
 
-        /*
-         * STEP 6
-         * GO BACK TO HOME
-         */
+ 
 
         driver.get(BASE_URL);
 
-        /*
-         * STEP 7
-         * BUSINESS PAGE
-         */
 
         home.goToBusinessPage();
 
         BusinessFormPage form = new BusinessFormPage(driver);
-
-        /*
-         * STEP 8
-         * FILL FORM
-         */
 
         form.fillFirstName(firstName);
 
@@ -164,16 +132,7 @@ public class AlisonUserJourneyTest extends BaseTest {
 
         form.fillTrainingRequirement( trainingRequirement);
 
-        /*
-         * STEP 9
-         * SUBMIT FORM
-         */
-
         form.submitForm();
-
-        /*
-         * Post Submit Validation
-         */
 
         String validationMessage =form.getValidationErrorMessage();
 

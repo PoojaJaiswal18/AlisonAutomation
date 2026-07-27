@@ -1,16 +1,12 @@
 package listeners;
 
 import tests.BaseTest;
-import utils.ExcelUtils;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import utils.ScreenshotUtils;
-
 import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.*;
-
-import java.lang.reflect.Field;
 
 public class TestListener implements ITestListener {
 
@@ -27,7 +23,7 @@ public class TestListener implements ITestListener {
 
         spark.config().setReportName("Alison End-to-End Automation Suite");
 
-        spark.config().setTheme( com.aventstack.extentreports.reporter.configuration.Theme.DARK);
+        spark.config().setTheme(Theme.DARK);
 
         extent = new ExtentReports();
 
@@ -54,15 +50,14 @@ public class TestListener implements ITestListener {
 
         test.pass("Test Passed");
 
-        logToExcel(result,"PASS","");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
 
         test.fail(result.getThrowable());
-
-        WebDriver driver =getDriver(result);
+        BaseTest baseTest = (BaseTest) result.getInstance();
+        WebDriver driver =baseTest.getDriver();
 
         if (driver != null) {
 
@@ -74,9 +69,7 @@ public class TestListener implements ITestListener {
 
             } catch (Exception e) {
             }
-        }
-
-        logToExcel(result,"FAIL", result.getThrowable() != null? result.getThrowable().getMessage(): "");
+        }  
     }
 
     @Override
@@ -84,7 +77,7 @@ public class TestListener implements ITestListener {
 
         test.skip("Test Skipped");
 
-        logToExcel(result,"SKIP","");
+    
     }
 
     @Override
@@ -95,30 +88,7 @@ public class TestListener implements ITestListener {
         System.out.println("Suite finished : "+ context.getName());
     }
 
-    private void logToExcel(ITestResult result, String status,String notes) {
+   
 
-        Object[] params =result.getParameters();
 
-        String testCaseId =(params != null && params.length > 0)? String.valueOf(params[0]): result.getMethod().getMethodName();
-
-       
-    }
-
-    private WebDriver getDriver(ITestResult result) {
-
-        try {
-
-            Object instance =result.getInstance();
-
-            Field driverField =instance.getClass().getSuperclass().getDeclaredField("driver");
-
-            driverField.setAccessible(true);
-
-            return (WebDriver)driverField.get(instance);
-
-        } catch (Exception e) {
-
-            return null;
-        }
-    }
 }
