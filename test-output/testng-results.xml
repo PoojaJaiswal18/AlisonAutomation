@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-27T14:22:55 IST" name="AlisonAutomationSuite" finished-at="2026-07-27T14:27:23 IST" duration-ms="267816">
+  <suite started-at="2026-07-28T17:45:48 IST" name="AlisonAutomationSuite" finished-at="2026-07-28T17:49:52 IST" duration-ms="243643">
     <groups>
     </groups>
-    <test started-at="2026-07-27T14:22:55 IST" name="AlisonUserJourney" finished-at="2026-07-27T14:27:23 IST" duration-ms="267816">
+    <test started-at="2026-07-28T17:45:48 IST" name="AlisonUserJourney" finished-at="2026-07-28T17:49:52 IST" duration-ms="243643">
       <class name="tests.AlisonUserJourneyTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-27T14:22:57 IST" name="setUp" finished-at="2026-07-27T14:23:09 IST" duration-ms="12512" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-28T17:45:49 IST" name="setUp" finished-at="2026-07-28T17:46:00 IST" duration-ms="11150" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-27T14:23:09 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-27T14:24:05 IST" duration-ms="55434" status="PASS">
+        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-28T17:46:00 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-28T17:47:00 IST" duration-ms="59944" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -97,15 +97,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- completeJourney -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-27T14:24:05 IST" name="tearDown" finished-at="2026-07-27T14:24:13 IST" duration-ms="8445" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-28T17:47:00 IST" name="tearDown" finished-at="2026-07-28T17:47:09 IST" duration-ms="8691" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-27T14:24:13 IST" name="setUp" finished-at="2026-07-27T14:24:22 IST" duration-ms="9392" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-28T17:47:09 IST" name="setUp" finished-at="2026-07-28T17:47:19 IST" duration-ms="10295" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-27T14:24:22 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-27T14:25:55 IST" duration-ms="92303" status="PASS">
+        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-28T17:47:19 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-28T17:48:19 IST" duration-ms="59135" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -191,15 +191,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- completeJourney -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-27T14:25:55 IST" name="tearDown" finished-at="2026-07-27T14:26:05 IST" duration-ms="9930" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-28T17:48:19 IST" name="tearDown" finished-at="2026-07-28T17:48:28 IST" duration-ms="9308" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-27T14:26:05 IST" name="setUp" finished-at="2026-07-27T14:26:14 IST" duration-ms="9787" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-28T17:48:28 IST" name="setUp" finished-at="2026-07-28T17:48:38 IST" duration-ms="10345" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-27T14:26:14 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-27T14:27:14 IST" duration-ms="59867" status="PASS">
+        <test-method signature="completeJourney(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-28T17:48:38 IST" name="completeJourney" description="Complete Alison User Journey" data-provider="journeyData" finished-at="2026-07-28T17:49:42 IST" duration-ms="63714" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -285,7 +285,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- completeJourney -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-27T14:27:14 IST" name="tearDown" finished-at="2026-07-27T14:27:23 IST" duration-ms="8318" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AlisonUserJourneyTest@6150c3ec]" started-at="2026-07-28T17:49:42 IST" name="tearDown" finished-at="2026-07-28T17:49:52 IST" duration-ms="9699" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

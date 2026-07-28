@@ -12,6 +12,7 @@ import pages.HomePage;
 import pages.SearchResultsPage;
 
 import utils.ExcelUtils;
+
 import java.util.List;
 import java.util.Map;
 
@@ -41,25 +42,29 @@ public class AlisonUserJourneyTest extends BaseTest {
             String department,
             String product,
             String industry,
+
             String organisationName,
             String organisationType,
             String organisationSize,
+
             String country,
             String trainingRequirement,
             String correctEmail) {
 
-    	System.out.println("Executing Journey : " + testCaseId);
+        System.out.println("Executing Journey : " + testCaseId);
 
         System.out.println("==========================================");
 
-        System.out.println("STARTING USER JOURNEY : "+ testCaseId);
+        System.out.println("STARTING USER JOURNEY : " + testCaseId);
 
         System.out.println("==========================================");
 
-   
+
         HomePage home =new HomePage(driver);
 
         home.searchCourse(keyword);
+
+        Assert.assertTrue(driver.getCurrentUrl().contains("courses"),"Search results page not opened");
 
         SearchResultsPage results =new SearchResultsPage(driver);
 
@@ -67,38 +72,46 @@ public class AlisonUserJourneyTest extends BaseTest {
 
         results.applyLevelFilter(level);
 
-      
-
         List<CourseData> courses =results.extractVisibleCourses(2);
 
         Assert.assertTrue( courses.size() > 0,"No courses returned");
 
-       
+        String firstCourseTitle =results.getFirstCourseTitle();
+
+        Assert.assertFalse(firstCourseTitle.equals("N/A"),"Course title not found");
 
 
         results.openFirstCourseDetails();
 
         CourseDetailsPage detailsPage = new CourseDetailsPage(driver);
 
-        Map<String, String> details = detailsPage.getCourseDetails();
+        Map<String, String> details =detailsPage.getCourseDetails();
+
+        Assert.assertNotNull(details,"Course details not loaded");
+
+        Assert.assertFalse(details.getOrDefault("Course","").isBlank(),"Course name missing");
+
+        System.out.println("[PASS] Course Details Extracted");
 
         ExcelUtils.appendCourseDetails(EXCEL_PATH,testCaseId,
-        		
-                details.getOrDefault("Course",""),
-                details.getOrDefault("Description",""),
-                details.getOrDefault("Duration",""),
-                details.getOrDefault("Enrollments",""),
-                details.getOrDefault("Modules",""),
-                details.getOrDefault("Publisher",""));
 
- 
+                details.getOrDefault( "Course",""),
+
+                details.getOrDefault( "Description",""),
+
+                details.getOrDefault("Duration",""),
+
+                details.getOrDefault( "Enrollments",""),
+
+                details.getOrDefault("Modules",""),
+
+                details.getOrDefault("Publisher", ""));
 
         driver.get(BASE_URL);
 
-
         home.goToBusinessPage();
 
-        BusinessFormPage form = new BusinessFormPage(driver);
+        BusinessFormPage form =new BusinessFormPage(driver);
 
         form.fillFirstName(firstName);
 
@@ -106,18 +119,23 @@ public class AlisonUserJourneyTest extends BaseTest {
 
         form.fillEmail(email);
 
-        form.fillCompanyName(organisationName);
+        form.fillCompanyName( organisationName);
 
-        String emailValidationMessage = form.getEmailValidationMessage();
+        String emailValidationMessage =form.getEmailValidationMessage();
 
-        System.out.println("Error message encountered:"+ emailValidationMessage);
+        System.out.println( "Error message encountered : "+ emailValidationMessage);
 
+        
+
+        if (!emailValidationMessage.isBlank()) {
+
+            System.out.println("[PASS] Email validation displayed");
+        }
 
         form.replaceEmail(correctEmail);
 
         System.out.println("[PASS] Email Updated : "+ correctEmail);
 
-        
         form.selectDepartment(department);
 
         form.selectProduct(product);
@@ -130,14 +148,12 @@ public class AlisonUserJourneyTest extends BaseTest {
 
         form.selectCountry(country);
 
-        form.fillTrainingRequirement( trainingRequirement);
+        form.fillTrainingRequirement(trainingRequirement);
 
         form.submitForm();
 
         String validationMessage =form.getValidationErrorMessage();
 
-       
-        
         if (!validationMessage.isEmpty()) {
 
             System.out.println("[INFO] Validation Message : "+ validationMessage);
@@ -147,6 +163,9 @@ public class AlisonUserJourneyTest extends BaseTest {
             System.out.println("[PASS] Form Submitted Successfully");
         }
 
-        System.out.println( "USER JOURNEY COMPLETE : "+ testCaseId);
-}
+
+        Assert.assertTrue(validationMessage.isEmpty(),"Form submission failed : " + validationMessage);
+
+        System.out.println("USER JOURNEY COMPLETE : "+ testCaseId);
     }
+}
