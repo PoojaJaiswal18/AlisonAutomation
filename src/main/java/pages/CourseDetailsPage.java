@@ -48,8 +48,7 @@ public class CourseDetailsPage extends BasePage {
 
     public Map<String, String> getCourseDetails() {
 
-        Map<String, String> data =
-                new LinkedHashMap<>();
+        Map<String, String> data = new LinkedHashMap<>();
 
         try {
 

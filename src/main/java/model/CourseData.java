@@ -31,10 +31,6 @@ public class CourseData {
     @Override
     public String toString() {
 
-        return "CourseData{" +
-                "name='" + name + '\'' +
-                ", duration='" + duration + '\'' +
-                ", learners='" + learners + '\'' +
-                '}';
+        return "CourseData{" +"name='" + name + '\'' +", duration='" + duration + '\'' + ", learners='" + learners + '\'' + '}';
     }
 }

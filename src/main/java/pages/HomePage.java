@@ -25,15 +25,11 @@ public class HomePage extends BasePage {
 
     public void searchCourse(String keyword) {
 
-        System.out.println(
-                "====================================");
+        System.out.println( "====================================");
 
-        System.out.println(
-                "[STEP] Searching Keyword : "
-                        + keyword);
+        System.out.println( "[STEP] Searching Keyword : "+ keyword);
 
-        System.out.println(
-                "====================================");
+        System.out.println("====================================");
 
         searchBox.clear();
 
