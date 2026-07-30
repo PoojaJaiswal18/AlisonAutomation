@@ -11,7 +11,7 @@ import org.testng.*;
 public class TestListener implements ITestListener {
 
     private ExtentReports extent;
-    private ExtentTest test;
+    public static ExtentTest test;;
 
  
     @Override
@@ -21,7 +21,7 @@ public class TestListener implements ITestListener {
 
         spark.config().setDocumentTitle("Alison Automation Report");
 
-        spark.config().setReportName("Alison End-to-End Automation Suite");
+        spark.config().setReportName("Alison Automation");
 
         spark.config().setTheme(Theme.DARK);
 
@@ -37,14 +37,17 @@ public class TestListener implements ITestListener {
 
         System.out.println("Suite started : " + context.getName());
     }
+   
     @Override
     public void onTestStart(ITestResult result) {
 
-        test =extent.createTest(result.getName());
+        String testName ="USER "+ result.getParameters()[0].toString().replace("TC_", "")+ " JOURNEY";
 
-        test.info( "Executing : "+ result.getName());
+        test = extent.createTest(testName);
+
+        test.info("Executing : " + testName);
     }
-
+    
     @Override
     public void onTestSuccess(ITestResult result) {
 
@@ -86,6 +89,30 @@ public class TestListener implements ITestListener {
         extent.flush();
 
         System.out.println("Suite finished : "+ context.getName());
+    }
+    
+    public static void logInfo(String message) {
+
+        if (test != null) {
+
+            test.info(message);
+        }
+    }
+
+    public static void logPass(String message) {
+
+        if (test != null) {
+
+            test.pass(message);
+        }
+    }
+
+    public static void logFail(String message) {
+
+        if (test != null) {
+
+            test.fail(message);
+        }
     }
 
    
